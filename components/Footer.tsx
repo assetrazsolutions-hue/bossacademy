@@ -50,6 +50,24 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a
+                  href="mailto:info@bossacademy.org"
+                  className="text-[#b8c5d1] hover:text-white transition"
+                >
+                  Email: info@bossacademy.org
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.bossacademy.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#b8c5d1] hover:text-white transition"
+                >
+                  Website: www.bossacademy.org
+                </a>
+              </li>
+              <li>
                 <a 
                   href="https://wa.me/919916800685" 
                   target="_blank" 

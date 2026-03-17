@@ -65,7 +65,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 npm run dev
 ```
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser
+6. Open [https://www.bossacademy.org](https://www.bossacademy.org) in your browser
 
 ## Project Structure
 

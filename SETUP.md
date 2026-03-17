@@ -32,7 +32,7 @@ Replace the values with your actual Supabase credentials.
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your website!
+Open [https://www.bossacademy.org](https://www.bossacademy.org) to see your website!
 
 ## Troubleshooting
 

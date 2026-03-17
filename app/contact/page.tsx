@@ -88,7 +88,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-text mb-1">Email</h3>
-                    <p className="text-text-light">info@bossacademy.com</p>
+                    <a href="mailto:info@bossacademy.org" className="text-primary-600 hover:text-primary-700">
+                      info@bossacademy.org
+                    </a>
                   </div>
                 </div>
               </div>

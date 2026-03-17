@@ -10,6 +10,13 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'BOSS Global Academy of Technology',
   description: 'Professional training programs for hospitals, schools, colleges, and corporate organizations',
+  metadataBase: new URL('https://www.bossacademy.org'),
+  openGraph: {
+    title: 'BOSS Global Academy of Technology',
+    description:
+      'Professional training programs for hospitals, schools, colleges, and corporate organizations',
+    url: 'https://www.bossacademy.org',
+  },
 }
 
 export default function RootLayout({
