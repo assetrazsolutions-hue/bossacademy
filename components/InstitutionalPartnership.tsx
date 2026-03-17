@@ -26,15 +26,6 @@ type Card = {
 
 const primaryCards: Card[] = [
   {
-    id: 'hospitals',
-    title: 'Healthcare Organizations',
-    label: 'Hospitals',
-    description:
-      'Train staff in patient care, hospital administration, billing, and digital healthcare systems.',
-    cta: 'Schedule Consultation',
-    icon: Hospital,
-  },
-  {
     id: 'education',
     title: 'Educational Institutions',
     label: 'Schools & Colleges',
@@ -42,6 +33,15 @@ const primaryCards: Card[] = [
       'Prepare students with industry-ready skills, future technologies, and career-focused training.',
     cta: 'Partner With Us',
     icon: GraduationCap,
+  },
+  {
+    id: 'hospitals',
+    title: 'Healthcare Organizations',
+    label: 'Hospitals',
+    description:
+      'Train staff in patient care, hospital administration, billing, and digital healthcare systems.',
+    cta: 'Schedule Consultation',
+    icon: Hospital,
   },
   {
     id: 'corporate',
