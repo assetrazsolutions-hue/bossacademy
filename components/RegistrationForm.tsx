@@ -42,11 +42,20 @@ export default function RegistrationForm() {
         message: formData.message || null,
       }
 
-      const { error } = await supabase
-        .from('registrations')
-        .insert([dbData])
+      const { error } = await supabase.from('registrations').insert([dbData])
 
       if (error) throw error
+
+      // Fire-and-forget email notification; failures here won't affect the user
+      fetch('/api/registration-apply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dbData),
+      }).catch((notifyError) => {
+        console.error('Error sending registration notification email:', notifyError)
+      })
 
       setSubmitStatus('success')
       setFormData({
