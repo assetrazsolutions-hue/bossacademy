@@ -4,6 +4,7 @@ import UpcomingBatches from '@/components/UpcomingBatches'
 import FeaturedPrograms from '@/components/FeaturedPrograms'
 import CareerPathway from '@/components/CareerPathway'
 import GovernmentCSRPrograms from '@/components/GovernmentCSRPrograms'
+import TrainerOverviewSection from '@/components/TrainerOverviewSection'
 import Link from 'next/link'
 
 export default function Home() {
@@ -26,6 +27,9 @@ export default function Home() {
 
       {/* Government & CSR Programs */}
       <GovernmentCSRPrograms />
+
+      {/* Trainer overview (details only, form on /trainers) */}
+      <TrainerOverviewSection />
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-primary-800 to-primary-900 text-white">
