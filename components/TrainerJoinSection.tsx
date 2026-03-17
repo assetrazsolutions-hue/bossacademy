@@ -30,8 +30,18 @@ export default function TrainerJoinSection() {
       const { error } = await supabase.from('trainer_applications').insert([payload])
       if (error) throw error
 
+      // Fire-and-forget email notification; failures here won't affect the user
+      fetch('/api/trainer-apply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      }).catch((notifyError) => {
+        console.error('Error sending trainer notification email:', notifyError)
+      })
+
       setSubmitStatus('success')
-      e.currentTarget.reset()
     } catch (error) {
       console.error('Error submitting trainer application:', error)
       setSubmitStatus('error')
