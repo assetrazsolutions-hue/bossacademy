@@ -5,7 +5,7 @@ const programs = [
   {
     id: 'office',
     title: 'AI-Powered Office Professional',
-    outcome: 'Become confident in real office work in 15 days',
+    outcome: 'Start your first job with confidence — Excel, emails, reports from Day 1',
     duration: '2–3 weeks',
     description:
       'Build practical skills in documents, spreadsheets, email, and everyday workplace tools — with AI-assisted workflows so you can hit the ground running in any office role.',
@@ -20,7 +20,7 @@ const programs = [
   {
     id: 'data',
     title: 'Data Analytics & Business Intelligence',
-    outcome: 'Become job-ready in 60–90 days',
+    outcome: 'Become the candidate companies shortlist — dashboards and job-ready projects',
     duration: '60–90 days',
     description:
       'Learn to analyze data, build reports, and communicate insights employers actually need — from spreadsheets to dashboards and business questions.',
@@ -35,7 +35,7 @@ const programs = [
   {
     id: 'marketing',
     title: 'Digital Marketing & Freelancing',
-    outcome: 'Start earning through freelancing or marketing jobs',
+    outcome: 'Start earning your first income online with practical marketing skills',
     duration: 'Flexible pace',
     description:
       'Get hands-on with digital channels, campaigns, and client-ready deliverables — whether you want a job in marketing or to offer services independently.',

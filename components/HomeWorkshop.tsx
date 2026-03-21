@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { CheckCircle2 } from 'lucide-react'
 
 const bullets = [
-  'How to become job-ready in 60–90 days',
-  'What skills companies actually expect from freshers',
-  'Live demo of real office or marketing tasks',
-  'How to choose between Data Analytics and Digital Marketing',
+  'How to go from zero skills to job-ready in 60–90 days',
+  'The exact skills companies expect from freshers',
+  'Live demo of real tasks (Excel, marketing, reports)',
+  'How to choose the right path (Job vs Freelancing)',
 ]
 
 export default function HomeWorkshop() {
@@ -28,12 +28,15 @@ export default function HomeWorkshop() {
           href="/register"
           className="inline-block bg-primary-600 text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-primary-700 transition shadow-lg"
         >
-          Reserve Your Free Seat
+          Book My Free Seat
         </Link>
         <div className="mt-6 space-y-1 text-sm text-text-muted">
           <p>⚡ Limited seats per batch — early registration recommended</p>
           <p>Next batch starting soon</p>
         </div>
+        <p className="mt-6 text-sm font-medium text-text max-w-md mx-auto">
+          Most students delay and miss opportunities — don&apos;t wait.
+        </p>
       </div>
     </section>
   )

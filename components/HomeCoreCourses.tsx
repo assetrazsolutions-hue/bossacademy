@@ -6,7 +6,7 @@ const courses = [
     id: 'office',
     title: 'AI-Powered Office Professional',
     outcome:
-      'Become confident in real office work in just 15 days — Excel, emails, reports, and daily tasks.',
+      'Start your first job with confidence — handle Excel, emails, and reports from Day 1',
     duration: '2–3 weeks',
     icon: Laptop,
   },
@@ -14,15 +14,14 @@ const courses = [
     id: 'data',
     title: 'Data Analytics & Business Intelligence',
     outcome:
-      'Build job-ready data skills with real projects, dashboards, and interview-level training in 60–90 days.',
+      'Become the candidate companies shortlist — build real dashboards and job-ready projects',
     duration: '60–90 days',
     icon: BarChart3,
   },
   {
     id: 'marketing',
     title: 'Digital Marketing & Freelancing',
-    outcome:
-      'Learn how to run campaigns, create content, and start earning through freelancing or marketing jobs.',
+    outcome: 'Start earning your first income online with practical marketing skills',
     duration: 'Flexible pace',
     icon: Megaphone,
   },

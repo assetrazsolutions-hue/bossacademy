@@ -38,7 +38,7 @@ const primaryCards: Card[] = [
     label: 'Hospitals',
     description:
       'Train staff in patient care, hospital administration, billing, and digital systems to reduce errors and improve patient experience.',
-    cta: 'Get Started',
+    cta: 'Start Your Career',
     icon: MessageCircle,
   },
   {
@@ -47,7 +47,7 @@ const primaryCards: Card[] = [
     label: 'Corporate Organizations',
     description:
       'Upskill employees in digital tools, leadership, and emerging technologies to boost productivity and business growth.',
-    cta: 'Get Started',
+    cta: 'Start Your Career',
     icon: Building2,
   },
   {
@@ -56,7 +56,7 @@ const primaryCards: Card[] = [
     label: 'Industrial & Manufacturing',
     description:
       'Develop skilled technicians in EV, electrical systems, safety, and operations to improve throughput and reduce downtime.',
-    cta: 'Get Started',
+    cta: 'Start Your Career',
     icon: Car,
   },
   {
@@ -86,7 +86,7 @@ const moreCards: Card[] = [
     label: 'Startups & Small Businesses',
     description:
       'Support lean teams with practical training that accelerates product delivery, customer acquisition, and market readiness.',
-    cta: 'Get Started',
+    cta: 'Start Your Career',
     icon: Lightbulb,
   },
   {
@@ -95,7 +95,7 @@ const moreCards: Card[] = [
     label: 'IT & Tech',
     description:
       'Build strong engineering and operations teams with upskilling in modern stacks, tools, and delivery practices.',
-    cta: 'Get Started',
+    cta: 'Start Your Career',
     icon: CircuitBoard,
   },
   {
@@ -104,7 +104,7 @@ const moreCards: Card[] = [
     label: 'EV & Automotive',
     description:
       'Create EV-ready technicians and engineers through hands-on training in EV systems and diagnostics that improves service quality.',
-    cta: 'Get Started',
+    cta: 'Start Your Career',
     icon: Car,
   },
   {

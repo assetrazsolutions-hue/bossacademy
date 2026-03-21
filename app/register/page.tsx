@@ -6,7 +6,7 @@ export default function Register() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-text mb-4">
-            Book Your Seat — Start Your Career Journey
+            Reserve Your Seat — Start Your Career Journey
           </h1>
           <div className="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
           <p className="text-lg text-text-light max-w-2xl mx-auto">

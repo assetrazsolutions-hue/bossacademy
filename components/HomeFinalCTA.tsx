@@ -8,14 +8,14 @@ export default function HomeFinalCTA() {
           Stop learning randomly. Start building skills that actually get results.
         </h2>
         <p className="text-xl mb-10 text-primary-100 max-w-2xl mx-auto">
-          Join our free workshop and take the first step toward a job or income.
+          Take the first step toward a job or income today.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/register"
             className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-50 transition shadow-lg"
           >
-            Join Free Workshop
+            Save My Free Seat
           </Link>
           <Link
             href="/contact"

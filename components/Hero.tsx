@@ -27,16 +27,19 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Get Job-Ready or Start Earning in 60–90 Days
           </h1>
+          <p className="text-base md:text-lg font-medium text-amber-100/95 max-w-2xl mx-auto mb-4 leading-snug">
+            Most graduates don&apos;t get hired because they don&apos;t know how to do the work.
+          </p>
           <p className="text-lg md:text-xl lg:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto leading-relaxed">
-            Stop applying to jobs without skills. Learn what companies actually expect and become job-ready with
-            real-world training.
+            Stop applying blindly. Learn the exact skills companies expect and become job-ready with real-world
+            training.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/register"
               className="bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition"
             >
-              Join Free Workshop
+              Save My Free Seat
             </Link>
             <Link
               href="/programs"
