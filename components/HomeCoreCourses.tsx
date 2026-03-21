@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { Laptop, BarChart3, Megaphone } from 'lucide-react'
 
+const proofLines = ['Includes real projects', 'Hands-on training', 'No theory overload']
+
 const courses = [
   {
     id: 'office',
@@ -52,13 +54,26 @@ export default function HomeCoreCourses() {
                 </div>
                 <h3 className="text-xl font-bold text-text mb-3">{course.title}</h3>
                 <p className="text-text mb-2 leading-relaxed">{course.outcome}</p>
-                <p className="text-sm text-text-light mb-6">Duration: {course.duration}</p>
+                <p className="text-sm text-text-light mb-4">Duration: {course.duration}</p>
+                <ul className="mb-6 space-y-1.5 text-sm text-text-muted border-t border-gray-100 pt-4">
+                  {proofLines.map((line) => (
+                    <li key={line} className="flex items-center gap-2">
+                      <span className="text-primary-600" aria-hidden>
+                        •
+                      </span>
+                      {line}
+                    </li>
+                  ))}
+                </ul>
                 <Link
                   href="/register"
                   className="mt-auto inline-block w-full text-center bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition"
                 >
                   Start Your Career
                 </Link>
+                <p className="mt-3 text-center text-xs text-text-muted leading-snug">
+                  No prior experience needed. Beginner-friendly training.
+                </p>
               </div>
             )
           })}

@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import { CheckCircle2 } from 'lucide-react'
 
+/** Update when the next live workshop is scheduled (shown on homepage). */
+export const NEXT_WORKSHOP_WHEN = 'Saturday, 6 PM'
+
 const bullets = [
   'How to go from zero skills to job-ready in 60–90 days',
   'The exact skills companies expect from freshers',
@@ -30,9 +33,19 @@ export default function HomeWorkshop() {
         >
           Book My Free Seat
         </Link>
-        <div className="mt-6 space-y-1 text-sm text-text-muted">
-          <p>⚡ Limited seats per batch — early registration recommended</p>
-          <p>Next batch starting soon</p>
+        <div className="mt-6 space-y-2 text-sm text-text-muted">
+          <p className="font-medium text-text">
+            <span className="mr-1.5" aria-hidden>
+              📅
+            </span>
+            Next workshop: <span className="text-primary-700">{NEXT_WORKSHOP_WHEN}</span>
+          </p>
+          <p>
+            <span className="mr-1.5" aria-hidden>
+              ⏳
+            </span>
+            Limited seats — closing soon
+          </p>
         </div>
         <p className="mt-6 text-sm font-medium text-text max-w-md mx-auto">
           Most students delay and miss opportunities — don&apos;t wait.

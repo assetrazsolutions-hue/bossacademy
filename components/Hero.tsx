@@ -39,7 +39,7 @@ export default function Hero() {
               href="/register"
               className="bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition"
             >
-              Save My Free Seat
+              Join Free Workshop Now
             </Link>
             <Link
               href="/programs"
@@ -49,8 +49,11 @@ export default function Hero() {
             </Link>
           </div>
 
-          <p className="mt-6 text-sm text-indigo-100">
-            For students, freshers &amp; job seekers • No prior experience needed
+          <p className="mt-4 text-sm text-indigo-100/95 max-w-xl mx-auto">
+            No prior experience needed. Beginner-friendly training.
+          </p>
+          <p className="mt-3 text-sm text-indigo-100">
+            For students, freshers &amp; job seekers
           </p>
 
           <div className="mt-10 flex justify-center">

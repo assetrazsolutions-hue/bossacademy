@@ -15,7 +15,7 @@ export default function HomeFinalCTA() {
             href="/register"
             className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-50 transition shadow-lg"
           >
-            Save My Free Seat
+            Join Free Workshop Now
           </Link>
           <Link
             href="/contact"
@@ -24,6 +24,9 @@ export default function HomeFinalCTA() {
             Talk to Us
           </Link>
         </div>
+        <p className="mt-8 text-sm font-medium text-primary-100">
+          ⚡ Seats fill fast — don&apos;t miss this batch
+        </p>
       </div>
     </section>
   )

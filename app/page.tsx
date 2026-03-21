@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import HomeWorkshop from '@/components/HomeWorkshop'
+import HomeWhoFor from '@/components/HomeWhoFor'
 import HomeCoreCourses from '@/components/HomeCoreCourses'
 import HomeAfterJoin from '@/components/HomeAfterJoin'
 import HomeDecisionSupport from '@/components/HomeDecisionSupport'
@@ -12,6 +13,7 @@ export default function Home() {
     <div className="bg-background">
       <Hero />
       <HomeWorkshop />
+      <HomeWhoFor />
       <HomeCoreCourses />
       <HomeAfterJoin />
       <HomeDecisionSupport />

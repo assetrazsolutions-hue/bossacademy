@@ -12,7 +12,7 @@ export default function HomeDecisionSupport() {
           href="/register"
           className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition shadow-md"
         >
-          Join Free Workshop
+          Join Free Workshop Now
         </Link>
       </div>
     </section>
