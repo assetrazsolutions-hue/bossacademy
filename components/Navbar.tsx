@@ -49,7 +49,7 @@ export default function Navbar() {
             <Link href="/programs" className="text-text hover:text-primary-600 px-3 py-2 text-sm font-medium transition">
               Programs
             </Link>
-            <Link href="/#partnerships" className="text-text hover:text-primary-600 px-3 py-2 text-sm font-medium transition">
+            <Link href="/partnerships" className="text-text hover:text-primary-600 px-3 py-2 text-sm font-medium transition">
               Partnerships
             </Link>
             <Link href="/register" className="text-text hover:text-primary-600 px-3 py-2 text-sm font-medium transition">
@@ -108,7 +108,7 @@ export default function Navbar() {
               Programs
             </Link>
             <Link
-              href="/#partnerships"
+              href="/partnerships"
               className="text-text hover:text-primary-600 block px-3 py-2 text-base font-medium"
               onClick={() => setIsOpen(false)}
             >

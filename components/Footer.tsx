@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-[#b8c5d1] text-xl font-bold mb-4">BOSS Global Academy of Technology</h3>
             <p className="text-sm text-[#b8c5d1] opacity-90">
-              Delivering industry-ready skill development programs for institutions, professionals, and communities.
+              Practical training for students, freshers, and job seekers — plus enterprise partnerships for organizations.
             </p>
           </div>
 
@@ -25,6 +25,11 @@ export default function Footer() {
               <li>
                 <Link href="/programs" className="text-[#b8c5d1] hover:text-white transition">
                   Programs
+                </Link>
+              </li>
+              <li>
+                <Link href="/partnerships" className="text-[#b8c5d1] hover:text-white transition">
+                  Partnerships
                 </Link>
               </li>
               <li>
