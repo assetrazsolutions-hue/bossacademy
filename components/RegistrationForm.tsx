@@ -153,14 +153,14 @@ export default function RegistrationForm() {
             required
             value={formData.educationProfession}
             onChange={handleChange}
-            placeholder="e.g., B.Tech, Doctor, Teacher"
+            placeholder="e.g., B.Com final year, B.Tech fresher, 12th pass, career break"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           />
         </div>
 
         <div>
           <label htmlFor="programInterested" className="block text-sm font-medium text-gray-700 mb-2">
-            Program Interested <span className="text-red-500">*</span>
+            Course or workshop <span className="text-red-500">*</span>
           </label>
           <select
             id="programInterested"
@@ -170,18 +170,19 @@ export default function RegistrationForm() {
             onChange={handleChange}
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           >
-            <option value="">Select a program</option>
-            <option value="Hospital Staff Training">Hospital Staff Training</option>
-            <option value="College Graduate Skill Development">College Graduate Skill Development</option>
-            <option value="School Future Skills">School Future Skills</option>
-            <option value="Corporate Upskilling">Corporate Upskilling</option>
+            <option value="">Select an option</option>
+            <option value="Free Workshop">Free Workshop</option>
+            <option value="AI-Powered Office Professional">AI-Powered Office Professional</option>
+            <option value="Data Analytics & Business Intelligence">Data Analytics & Business Intelligence</option>
+            <option value="Digital Marketing & Freelancing">Digital Marketing & Freelancing</option>
+            <option value="Not sure — help me choose">Not sure — help me choose</option>
           </select>
         </div>
       </div>
 
       <div>
         <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">
-          Organization
+          College or employer <span className="text-gray-400 font-normal">(optional)</span>
         </label>
         <input
           type="text"
@@ -189,7 +190,7 @@ export default function RegistrationForm() {
           name="organization"
           value={formData.organization}
           onChange={handleChange}
-          placeholder="Name of your hospital, school, college, or company"
+          placeholder="e.g., college name, or leave blank if not applicable"
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         />
       </div>
@@ -205,13 +206,13 @@ export default function RegistrationForm() {
           value={formData.message}
           onChange={handleChange}
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-          placeholder="Tell us about your training needs..."
+          placeholder="What do you want to achieve? (e.g., first job, switch to analytics, start freelancing…)"
         />
       </div>
 
       {submitStatus === 'success' && (
         <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
-          Thank you! Your registration has been submitted successfully. We'll contact you soon.
+            Thank you! We’ve received your details and will contact you soon with next steps.
         </div>
       )}
 
@@ -226,30 +227,37 @@ export default function RegistrationForm() {
         disabled={isSubmitting}
         className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isSubmitting ? 'Submitting...' : 'Register for Training'}
+        {isSubmitting ? 'Submitting...' : "Submit — we'll contact you"}
       </button>
+
+      <p className="text-center text-sm text-text-muted">
+        Training for hospitals, schools, or companies?{' '}
+        <a href="/partnerships" className="text-primary-600 font-medium hover:underline">
+          Enterprise &amp; partnerships
+        </a>
+      </p>
 
       {/* Trust signals */}
       <div className="mt-6 bg-background-light border border-background-dark rounded-lg px-4 py-4 text-sm text-text-light">
         <h3 className="text-text font-semibold mb-2 text-sm">
-          Why Train with BOSS Academy?
+          Why register with BOSS Academy?
         </h3>
         <ul className="space-y-1">
           <li className="flex items-start gap-2">
             <span className="text-green-600 mt-0.5">✔</span>
-            <span>Industry focused training</span>
+            <span>Practical training — not theory overload</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 mt-0.5">✔</span>
-            <span>Experienced trainers</span>
+            <span>Real-world style projects</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 mt-0.5">✔</span>
-            <span>Practical skill development</span>
+            <span>Career- and income-focused paths</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 mt-0.5">✔</span>
-            <span>Certification and career support</span>
+            <span>Clear step-by-step learning path</span>
           </li>
         </ul>
       </div>
