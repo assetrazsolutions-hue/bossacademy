@@ -104,7 +104,7 @@ export default function Programs() {
                   href="/register"
                   className="inline-block w-full text-center bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition mt-auto"
                 >
-                  Enroll Now
+                  Start Your Career
                 </Link>
               </div>
             )

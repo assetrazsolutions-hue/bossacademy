@@ -47,7 +47,7 @@ export default function HomeHowItWorks() {
                     Build analysis and reporting skills employers look for.
                   </p>
                   <Link href="/register" className="text-primary-600 font-semibold text-sm hover:underline">
-                    Get started →
+                    Reserve Your Seat →
                   </Link>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-md border-2 border-indigo-200 hover:border-indigo-400 transition">
@@ -57,7 +57,7 @@ export default function HomeHowItWorks() {
                     Learn to run campaigns and freelance with practical projects.
                   </p>
                   <Link href="/register" className="text-indigo-600 font-semibold text-sm hover:underline">
-                    Get started →
+                    Reserve Your Seat →
                   </Link>
                 </div>
               </div>

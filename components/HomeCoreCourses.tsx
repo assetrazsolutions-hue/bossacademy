@@ -5,21 +5,24 @@ const courses = [
   {
     id: 'office',
     title: 'AI-Powered Office Professional',
-    outcome: 'Become confident in real office work in 15 days',
+    outcome:
+      'Become confident in real office work in just 15 days — Excel, emails, reports, and daily tasks.',
     duration: '2–3 weeks',
     icon: Laptop,
   },
   {
     id: 'data',
     title: 'Data Analytics & Business Intelligence',
-    outcome: 'Become job-ready in 60–90 days',
+    outcome:
+      'Build job-ready data skills with real projects, dashboards, and interview-level training in 60–90 days.',
     duration: '60–90 days',
     icon: BarChart3,
   },
   {
     id: 'marketing',
     title: 'Digital Marketing & Freelancing',
-    outcome: 'Start earning through freelancing or marketing jobs',
+    outcome:
+      'Learn how to run campaigns, create content, and start earning through freelancing or marketing jobs.',
     duration: 'Flexible pace',
     icon: Megaphone,
   },
@@ -33,7 +36,7 @@ export default function HomeCoreCourses() {
           <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Core Courses</h2>
           <div className="w-24 h-1 bg-primary-600 mx-auto mb-4" />
           <p className="text-lg text-text-light max-w-2xl mx-auto">
-            Outcome-focused programs built for people who want real skills — not endless theory.
+            Outcome-focused programs — not endless theory.
           </p>
         </div>
 
@@ -49,13 +52,13 @@ export default function HomeCoreCourses() {
                   <Icon className="w-14 h-14" aria-hidden />
                 </div>
                 <h3 className="text-xl font-bold text-text mb-3">{course.title}</h3>
-                <p className="text-text font-medium mb-2 text-primary-700">{course.outcome}</p>
+                <p className="text-text mb-2 leading-relaxed">{course.outcome}</p>
                 <p className="text-sm text-text-light mb-6">Duration: {course.duration}</p>
                 <Link
                   href="/register"
                   className="mt-auto inline-block w-full text-center bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition"
                 >
-                  Enroll Now
+                  Start Your Career
                 </Link>
               </div>
             )

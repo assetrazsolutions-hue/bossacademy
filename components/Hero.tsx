@@ -27,8 +27,9 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Get Job-Ready or Start Earning in 60–90 Days
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-10 text-primary-100 max-w-3xl mx-auto leading-relaxed">
-            Learn Data Analytics, Digital Marketing, and Office Skills through real-world training — not theory.
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto leading-relaxed">
+            Stop applying to jobs without skills. Learn what companies actually expect and become job-ready with
+            real-world training.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -46,15 +47,15 @@ export default function Hero() {
           </div>
 
           <p className="mt-6 text-sm text-indigo-100">
-            For students, freshers & job seekers · Practical skills · Real projects
+            For students, freshers &amp; job seekers • No prior experience needed
           </p>
 
           <div className="mt-10 flex justify-center">
             <Link
-              href="/#courses"
+              href="/#free-workshop"
               className="inline-flex flex-col items-center text-indigo-100 text-sm animate-bounce"
             >
-              <span className="mb-1">↓ Explore courses below</span>
+              <span className="mb-1">↓ See what the free workshop covers</span>
             </Link>
           </div>
         </div>

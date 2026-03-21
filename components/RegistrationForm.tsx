@@ -227,8 +227,12 @@ export default function RegistrationForm() {
         disabled={isSubmitting}
         className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isSubmitting ? 'Submitting...' : "Submit — we'll contact you"}
+        {isSubmitting ? 'Submitting...' : 'Reserve My Seat'}
       </button>
+
+      <p className="text-center text-sm text-text-light">
+        Our team will guide you on the right course after registration.
+      </p>
 
       <p className="text-center text-sm text-text-muted">
         Training for hospitals, schools, or companies?{' '}
