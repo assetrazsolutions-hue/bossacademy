@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24 lg:py-32">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Get Job-Ready or Start Earning in 60–90 Days
+            Build Job-Ready Skills or Start Earning with Real-World Training
           </h1>
           <p className="text-base md:text-lg font-medium text-amber-100/95 max-w-2xl mx-auto mb-4 leading-snug">
             Most graduates don&apos;t get hired because they don&apos;t know how to do the work.
