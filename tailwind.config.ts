@@ -34,6 +34,15 @@ const config: Config = {
           800: '#1a7ae6',
           900: '#1466b3',
         },
+        /** High-conversion CTA — orange (calm blue bg + loud CTA) */
+        cta: {
+          50: '#fff7ed',
+          100: '#ffedd5',
+          400: '#ff9f3c',
+          500: '#FF7A00',
+          600: '#FF6B00',
+          700: '#e85d00',
+        },
         background: {
           DEFAULT: '#f9fafa',
           light: '#ffffff',

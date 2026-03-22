@@ -78,7 +78,7 @@ export default function UpcomingBatches() {
                   <td className="px-4 sm:px-6 py-4 text-sm text-right">
                     <Link
                       href="/register"
-                      className="inline-block bg-primary-600 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold shadow hover:shadow-md hover:scale-105 transition"
+                      className="btn-cta px-4 py-2 text-xs sm:text-sm shadow hover:scale-105"
                     >
                       Register
                     </Link>

@@ -9,16 +9,16 @@ const points = [
 
 export default function HomeWhyChooseUs() {
   return (
-    <section id="why-us" className="py-16 md:py-20 bg-white border-t border-gray-100">
+    <section id="why-us" className="py-16 md:py-20 bg-white border-t border-gray-100 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.9)]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-text text-center mb-3">
           Built for Real Outcomes — Not Just Certificates
         </h2>
-        <div className="w-16 h-1 bg-primary-600 mx-auto mb-8" />
+        <div className="w-16 h-1 bg-cta-500 mx-auto mb-8" />
         <ul className="space-y-4">
           {points.map((item) => (
             <li key={item} className="flex items-start gap-3 text-text-light">
-              <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" aria-hidden />
+              <CheckCircle2 className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" aria-hidden />
               <span className="leading-relaxed">{item}</span>
             </li>
           ))}

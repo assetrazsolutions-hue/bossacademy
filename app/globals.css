@@ -17,3 +17,23 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  /**
+   * Primary conversion buttons — orange, shadow + glow, strong hover
+   * Use with padding/size classes, e.g. btn-cta px-8 py-4 text-lg
+   */
+  .btn-cta {
+    @apply inline-flex items-center justify-center bg-cta-500 text-white font-semibold rounded-lg;
+    @apply shadow-lg shadow-cta-500/35;
+    @apply hover:bg-cta-600 hover:shadow-xl hover:shadow-cta-600/45;
+    @apply active:scale-[0.98] transition-all duration-200;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cta-400;
+  }
+
+  .btn-cta-outline-light {
+    @apply inline-flex items-center justify-center border-2 border-white/90 text-white font-semibold rounded-lg bg-white/5;
+    @apply shadow-md shadow-black/10 hover:bg-white/15 hover:border-white;
+    @apply active:scale-[0.98] transition-all duration-200;
+  }
+}

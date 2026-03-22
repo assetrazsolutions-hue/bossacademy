@@ -71,7 +71,7 @@ export default function Programs() {
                 key={program.id}
                 className="bg-background-light rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-background-dark flex flex-col h-full"
               >
-                <div className="text-primary-600 mb-4">
+                <div className="text-gray-400 mb-4">
                   <Icon className="w-14 h-14" aria-hidden />
                 </div>
                 <h2 className="text-2xl font-bold text-text mb-2">{program.title}</h2>
@@ -84,7 +84,7 @@ export default function Programs() {
                     {program.features.map((feature) => (
                       <li key={feature} className="flex items-start text-text-light text-sm">
                         <svg
-                          className="w-5 h-5 text-primary-600 mr-2 flex-shrink-0 mt-0.5"
+                          className="w-5 h-5 text-gray-400 mr-2 flex-shrink-0 mt-0.5"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                           aria-hidden
@@ -100,10 +100,7 @@ export default function Programs() {
                     ))}
                   </ul>
                 </div>
-                <Link
-                  href="/register"
-                  className="inline-block w-full text-center bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition mt-auto"
-                >
+                <Link href="/register" className="btn-cta mt-auto w-full text-center px-6 py-3">
                   Start Your Career
                 </Link>
               </div>

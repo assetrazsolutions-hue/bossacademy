@@ -62,7 +62,7 @@ export default function GovernmentCSRPrograms() {
               <p className="text-text-light mb-6 flex-1">{program.description}</p>
               <Link
                 href="/register"
-                className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition"
+                className="btn-cta px-6 py-3"
               >
                 {program.buttonText}
               </Link>

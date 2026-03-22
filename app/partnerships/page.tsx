@@ -32,16 +32,10 @@ export default function PartnershipsPage() {
             Tell us about your organization and we&apos;ll suggest a training approach.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/register"
-              className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition"
-            >
+            <Link href="/register" className="btn-cta px-8 py-4">
               Register / Inquiry
             </Link>
-            <Link
-              href="/contact"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition"
-            >
+            <Link href="/contact" className="btn-cta-outline-light px-8 py-4">
               Contact Us
             </Link>
           </div>

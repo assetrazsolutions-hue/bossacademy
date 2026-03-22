@@ -35,7 +35,7 @@ export default function HomeCoreCourses() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Core Courses</h2>
-          <div className="w-24 h-1 bg-primary-600 mx-auto mb-4" />
+          <div className="w-24 h-1 bg-cta-500 mx-auto mb-4" />
           <p className="text-lg text-text-light max-w-2xl mx-auto">
             Outcome-focused programs — not endless theory.
           </p>
@@ -49,7 +49,7 @@ export default function HomeCoreCourses() {
                 key={course.id}
                 className="bg-background-light rounded-xl shadow-lg border border-background-dark hover:border-primary-300 hover:shadow-xl transition-all duration-300 p-8 flex flex-col h-full"
               >
-                <div className="text-primary-600 mb-4">
+                <div className="text-gray-400 mb-4">
                   <Icon className="w-14 h-14" aria-hidden />
                 </div>
                 <h3 className="text-xl font-bold text-text mb-3">{course.title}</h3>
@@ -58,17 +58,14 @@ export default function HomeCoreCourses() {
                 <ul className="mb-6 space-y-1.5 text-sm text-text-muted border-t border-gray-100 pt-4">
                   {proofLines.map((line) => (
                     <li key={line} className="flex items-center gap-2">
-                      <span className="text-primary-600" aria-hidden>
+                      <span className="text-gray-400" aria-hidden>
                         •
                       </span>
                       {line}
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/register"
-                  className="mt-auto inline-block w-full text-center bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition"
-                >
+                <Link href="/register" className="btn-cta mt-auto w-full text-center px-6 py-3">
                   Start Your Career
                 </Link>
                 <p className="mt-3 text-center text-xs text-text-muted leading-snug">

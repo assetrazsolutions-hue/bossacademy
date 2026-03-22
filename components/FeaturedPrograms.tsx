@@ -60,7 +60,7 @@ function FeaturedProgramCard({ program }: FeaturedProgramCardProps) {
       {/* Register Button */}
       <Link
         href="/register"
-        className="block w-full bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition mt-auto"
+        className="btn-cta block w-full text-center px-6 py-3 mt-auto"
       >
         {program.buttonText}
       </Link>

@@ -293,9 +293,9 @@ function Card({ card }: { card: Card }) {
 
         <div className="mt-6">
           <motion.button
-            whileHover={{ scale: 1.03, boxShadow: '0 10px 25px rgba(37,99,235,0.35)' }}
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 to-indigo-500 px-4 py-2.5 text-sm font-semibold text-white shadow-md ring-1 ring-transparent transition-all duration-200 hover:from-blue-700 hover:to-indigo-600 hover:ring-blue-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+            className="btn-cta w-full px-4 py-2.5 text-sm"
           >
             {card.cta}
           </motion.button>

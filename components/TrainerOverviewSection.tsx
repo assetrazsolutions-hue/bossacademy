@@ -85,7 +85,7 @@ export default function TrainerOverviewSection() {
         <div className="text-center">
           <Link
             href="/trainers"
-            className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition shadow-md hover:shadow-lg"
+            className="btn-cta px-8 py-3 shadow-md"
           >
             Apply as Trainer
           </Link>

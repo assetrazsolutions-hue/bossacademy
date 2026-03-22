@@ -13,7 +13,7 @@ function Step({ stepNumber, title, description, icon, isLast = false }: StepProp
       {!isLast && (
         <div className="hidden md:block absolute top-8 left-[60%] w-full h-0.5 bg-primary-300 z-0">
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
-            <svg className="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
           </div>
@@ -21,7 +21,7 @@ function Step({ stepNumber, title, description, icon, isLast = false }: StepProp
       )}
 
       {/* Step Circle */}
-      <div className="relative z-10 bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-lg">
+      <div className="relative z-10 bg-slate-500 w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-inner border border-white/25">
         <span className="text-white text-2xl">{icon}</span>
       </div>
 
@@ -75,7 +75,7 @@ export default function CareerPathway() {
           <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
             Your Career Transformation Journey
           </h2>
-          <div className="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-cta-500 mx-auto mb-6"></div>
           <p className="text-lg text-text-light max-w-2xl mx-auto">
             A structured pathway designed to transform learners into industry-ready professionals.
           </p>
@@ -103,7 +103,7 @@ export default function CareerPathway() {
               <div key={index} className="flex items-start gap-4">
                 {/* Step Circle */}
                 <div className="flex-shrink-0 relative">
-                  <div className="bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
+                  <div className="bg-slate-500 w-16 h-16 rounded-full flex items-center justify-center shadow-inner border border-white/25">
                     <span className="text-white text-2xl">{step.icon}</span>
                   </div>
                   {index < steps.length - 1 && (
@@ -128,7 +128,7 @@ export default function CareerPathway() {
         <div className="text-center mt-16">
           <a
             href="/register"
-            className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition"
+            className="btn-cta px-8 py-3"
           >
             Register for Training
           </a>

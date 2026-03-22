@@ -8,7 +8,7 @@ export default function Register() {
           <h1 className="text-4xl md:text-5xl font-bold text-text mb-4">
             Reserve Your Seat — Start Your Career Journey
           </h1>
-          <div className="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-cta-500 mx-auto mb-6"></div>
           <p className="text-lg text-text-light max-w-2xl mx-auto">
             Reserve a spot for the free workshop or a course. We&apos;ll reach out with next steps.
           </p>

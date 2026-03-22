@@ -58,10 +58,7 @@ export default function Navbar() {
             <Link href="/contact" className="text-text hover:text-primary-600 px-3 py-2 text-sm font-medium transition">
               Contact
             </Link>
-            <Link 
-              href="/register" 
-              className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition font-medium"
-            >
+            <Link href="/register" className="btn-cta px-6 py-2 text-sm font-medium">
               Join Free Workshop Now
             </Link>
           </div>
@@ -130,7 +127,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/register"
-              className="bg-primary-600 text-white block px-3 py-2 rounded-lg hover:bg-primary-700 transition font-medium text-center"
+              className="btn-cta block px-3 py-2 text-center text-sm font-medium"
               onClick={() => setIsOpen(false)}
             >
               Join Free Workshop Now

@@ -225,7 +225,7 @@ export default function RegistrationForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+        className="btn-cta w-full px-6 py-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-lg disabled:active:scale-100"
       >
         {isSubmitting ? 'Submitting...' : 'Reserve My Seat Now'}
       </button>

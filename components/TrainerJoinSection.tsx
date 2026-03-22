@@ -133,7 +133,7 @@ export default function TrainerJoinSection() {
         <div className="text-center mb-10">
           <Link
             href="#trainer-application"
-            className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition shadow-md hover:shadow-lg"
+            className="btn-cta px-8 py-3 shadow-md"
           >
             Apply as Trainer
           </Link>
@@ -276,7 +276,7 @@ export default function TrainerJoinSection() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition shadow-md hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
+              className="btn-cta w-full px-6 py-3 shadow-md disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-lg disabled:active:scale-100"
             >
               {isSubmitting ? 'Submitting...' : 'Submit Application'}
             </button>
