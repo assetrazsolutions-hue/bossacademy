@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { Laptop, BarChart3, Megaphone } from 'lucide-react'
+import MediaImage from '@/components/MediaImage'
+import { siteImages } from '@/lib/site-images'
 
 const courses = [
   {
@@ -15,6 +17,7 @@ const courses = [
     icon: Laptop,
     cta: 'Get office ready',
     ctaHref: '/programs#office',
+    imageKey: 'office' as const,
   },
   {
     id: 'data',
@@ -29,6 +32,7 @@ const courses = [
     icon: BarChart3,
     cta: 'Build data skills',
     ctaHref: '/programs#data',
+    imageKey: 'data' as const,
   },
   {
     id: 'marketing',
@@ -43,6 +47,7 @@ const courses = [
     icon: Megaphone,
     cta: 'Start earning online',
     ctaHref: '/programs#marketing',
+    imageKey: 'marketing' as const,
   },
 ]
 
@@ -60,30 +65,47 @@ export default function HomeCoreCourses() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {courses.map((course) => {
             const Icon = course.icon
+            const { src, alt } = siteImages.courses[course.imageKey]
             return (
               <article
                 key={course.id}
-                className="rounded-card border border-slate-200/90 bg-white p-8 flex flex-col h-full shadow-sm hover:shadow-lg hover:border-primary-200/80 hover:-translate-y-1 transition-all duration-300"
+                className="group rounded-card border border-slate-200/90 bg-white flex flex-col h-full shadow-sm hover:shadow-lg hover:border-primary-200/80 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-card bg-slate-50 text-primary-600 ring-1 ring-slate-100">
-                  <Icon className="w-6 h-6" strokeWidth={2} aria-hidden />
+                <div className="relative">
+                  <MediaImage
+                    src={src}
+                    alt={alt}
+                    aspect="card"
+                    corners="top"
+                    hoverZoom
+                    sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                  />
+                  <span
+                    className="absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-card bg-white/95 text-primary-600 shadow-sm ring-1 ring-slate-200/80 backdrop-blur-sm"
+                    aria-hidden
+                  >
+                    <Icon className="w-5 h-5" strokeWidth={2} />
+                  </span>
                 </div>
-                <p className="text-primary-700 font-semibold text-base leading-snug mb-2">{course.headline}</p>
-                <h3 className="font-heading text-lg font-bold text-slate-900 mb-1">{course.title}</h3>
-                <p className="text-sm text-slate-500 mb-6">Duration: {course.duration}</p>
-                <ul className="mb-8 space-y-3 text-sm text-slate-600 flex-1">
-                  {course.bullets.map((line) => (
-                    <li key={line} className="flex gap-3 leading-relaxed">
-                      <span className="text-accent-500 font-bold shrink-0 mt-0.5" aria-hidden>
-                        ·
-                      </span>
-                      <span>{line}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href={course.ctaHref} className="btn-cta w-full text-center px-6 py-3.5 text-base">
-                  {course.cta}
-                </Link>
+
+                <div className="p-8 flex flex-col flex-1 pt-7">
+                  <p className="text-primary-700 font-semibold text-base leading-snug mb-2">{course.headline}</p>
+                  <h3 className="font-heading text-lg font-bold text-slate-900 mb-1">{course.title}</h3>
+                  <p className="text-sm text-slate-500 mb-6">Duration: {course.duration}</p>
+                  <ul className="mb-8 space-y-3 text-sm text-slate-600 flex-1">
+                    {course.bullets.map((line) => (
+                      <li key={line} className="flex gap-3 leading-relaxed">
+                        <span className="text-accent-500 font-bold shrink-0 mt-0.5" aria-hidden>
+                          ·
+                        </span>
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={course.ctaHref} className="btn-cta w-full text-center px-6 py-3.5 text-base">
+                    {course.cta}
+                  </Link>
+                </div>
               </article>
             )
           })}

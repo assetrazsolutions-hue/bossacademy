@@ -4,6 +4,7 @@ import HomeWhoFor from '@/components/HomeWhoFor'
 import HomeCoreCourses from '@/components/HomeCoreCourses'
 import HomeWhyChooseUs from '@/components/HomeWhyChooseUs'
 import HomeHowItWorks from '@/components/HomeHowItWorks'
+import HomeTestimonials from '@/components/HomeTestimonials'
 import HomeFinalCTA from '@/components/HomeFinalCTA'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <HomeCoreCourses />
       <HomeWhyChooseUs />
       <HomeHowItWorks />
+      <HomeTestimonials />
       <HomeFinalCTA />
     </div>
   )

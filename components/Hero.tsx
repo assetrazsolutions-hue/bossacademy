@@ -1,8 +1,11 @@
 import Link from 'next/link'
-import HeroIllustration from '@/components/HeroIllustration'
+import MediaImage from '@/components/MediaImage'
+import { siteImages } from '@/lib/site-images'
 import { WHATSAPP_ADVISOR_URL } from '@/lib/whatsapp'
 
 export default function Hero() {
+  const { src, alt } = siteImages.hero
+
   return (
     <section className="relative overflow-hidden bg-surface pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(37,99,235,0.12),transparent)]" />
@@ -36,9 +39,16 @@ export default function Hero() {
           </div>
 
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md lg:max-w-lg transition-transform duration-300 hover:scale-[1.02]">
-              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary-600/10 via-transparent to-accent-500/10 blur-2xl" />
-              <HeroIllustration />
+            <div className="relative w-full max-w-md lg:max-w-lg">
+              <div className="absolute -inset-3 rounded-[1.25rem] bg-gradient-to-br from-primary-600/15 via-transparent to-accent-500/10 blur-2xl" />
+              <MediaImage
+                src={src}
+                alt={alt}
+                aspect="hero"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="relative z-10 ring-1 ring-slate-200/80"
+              />
             </div>
           </div>
         </div>
