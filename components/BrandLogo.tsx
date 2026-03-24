@@ -1,9 +1,9 @@
 /**
- * BOSS wordmark: one cohesive word (BOS + orange S), geometric sans, base accent bar.
+ * BOSS wordmark: unified primary blue, geometric sans, single base bar.
  * Building Outstanding Smart Skills — Global Academy of Technology
  */
 type BrandLogoProps = {
-  /** `light`: blue/orange on white. `dark`: light wordmark for dark backgrounds (e.g. footer). */
+  /** `light`: primary blue on white. `dark`: light wordmark for dark backgrounds (e.g. footer). */
   variant?: 'light' | 'dark'
   /** `lg` nav, `md` compact, `sm` footer */
   size?: 'sm' | 'md' | 'lg'
@@ -42,30 +42,23 @@ export default function BrandLogo({
   const s = sizeClasses[size]
   const isLight = variant === 'light'
 
-  const bosClass = isLight ? 'text-primary-600' : 'text-white'
-  const lastSClass = isLight ? 'text-accent-500' : 'text-accent-500'
-  const barLeft = isLight ? 'bg-primary-600' : 'bg-white/90'
-  const barRight = 'bg-accent-500'
-  /** Tighter subtitle, step up from medium → semibold */
+  const wordClass = isLight ? 'text-primary-600' : 'text-white'
+  const barClass = isLight ? 'bg-primary-600' : 'bg-white/90'
   const subClass = isLight ? 'text-[#475569] font-semibold' : 'text-slate-400 font-semibold'
-
-  const hoverBos = interactive ? 'group-hover:text-primary-700 transition-colors duration-200' : ''
-  const hoverS = interactive ? 'group-hover:text-accent-600 transition-colors duration-200' : ''
+  const hoverWord = interactive
+    ? isLight
+      ? 'group-hover:text-primary-700 transition-colors duration-200'
+      : 'group-hover:text-white/95 transition-colors duration-200'
+    : ''
 
   return (
     <div className={`inline-flex flex-col w-fit ${className}`}>
-      {/* Single optical line: shared tracking + weight so BOSS reads as one word; orange S tucked with negative margin */}
       <div
         className={`inline-flex items-baseline font-heading font-extrabold uppercase ${s.word} tracking-[-0.065em]`}
       >
-        <span className={`${bosClass} ${hoverBos}`}>BOS</span>
-        <span className={`${lastSClass} ${hoverS} -ml-[0.03em]`}>S</span>
+        <span className={`${wordClass} ${hoverWord}`}>BOSS</span>
       </div>
-      {/* Flush two-tone bar — no gap, shared edge for a clean underline */}
-      <div className={`flex w-full gap-0 overflow-hidden rounded-sm ${s.bar}`} aria-hidden>
-        <span className={`min-h-0 flex-[2.05] rounded-l-sm ${barLeft}`} />
-        <span className={`min-h-0 flex-[0.7] rounded-r-sm ${barRight}`} />
-      </div>
+      <div className={`w-full rounded-sm ${barClass} ${s.bar}`} aria-hidden />
       <p
         className={`${s.sub} ${s.subGap} ${subClass} tracking-[-0.02em] leading-tight max-w-[16.5rem]`}
       >

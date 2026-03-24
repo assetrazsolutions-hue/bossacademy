@@ -55,14 +55,45 @@ export default function HomeCoreCourses() {
   return (
     <section id="courses" className="py-20 md:py-28 bg-surface">
       <div className="section-container">
-        <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
+        <div className="max-w-2xl mx-auto text-center mb-10 md:mb-12">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">Core programs</h2>
           <p className="text-lg text-slate-600 leading-relaxed mb-3">
             Tracks built around skills you use on the job: short bursts of learning, then practice.
           </p>
           <p className="text-sm text-slate-500">
-            Limited seats per batch · Next batch starting soon
+            Limited seats per batch · New batches starting regularly
           </p>
+        </div>
+
+        <div className="max-w-3xl mx-auto mb-12 md:mb-14">
+          <div className="rounded-card border border-slate-200/90 bg-white p-6 md:p-8 shadow-sm">
+            <h3 className="font-heading text-lg md:text-xl font-semibold text-slate-900 mb-3 text-center sm:text-left">
+              What to start first
+            </h3>
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-6 text-center sm:text-left">
+              New to workplace tools? Start with <strong className="font-semibold text-slate-800">Office</strong> — it is
+              the shortest track and gives you a practical base for almost any path. Then add{' '}
+              <strong className="font-semibold text-slate-800">Data</strong> if you want analyst-style roles, or{' '}
+              <strong className="font-semibold text-slate-800">Marketing</strong> if you want campaigns or online income.
+              You can always come back for another track; there is no single “right” order for everyone.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="rounded-card border border-primary-100 bg-primary-50/40 p-4 md:p-5">
+                <p className="font-heading text-sm font-semibold text-primary-800 mb-2">Aiming for a job</p>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Office plus Data or Marketing helps you build real tasks and samples you can talk about in interviews —
+                  not just a list of course names on your CV.
+                </p>
+              </div>
+              <div className="rounded-card border border-accent-100 bg-accent-50/30 p-4 md:p-5">
+                <p className="font-heading text-sm font-semibold text-slate-900 mb-2">Working on your own</p>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Marketing includes channels and freelance basics so you can start small. Office skills still help you
+                  stay organized with clients, files, and follow-ups.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
