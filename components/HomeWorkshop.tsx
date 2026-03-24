@@ -28,7 +28,7 @@ export default function HomeWorkshop() {
           ))}
         </ul>
         <Link href="/register" className="btn-cta px-8 py-3.5 text-lg">
-          Book My Free Seat
+          Start Learning Now
         </Link>
         <div className="mt-6 space-y-2 text-sm text-slate-500">
           <p className="font-medium text-slate-900">

@@ -30,4 +30,9 @@ export const siteImages = {
     src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=85&auto=format&fit=crop',
     alt: 'Team learning together with a mentor in a modern workspace',
   },
+  /** Approachable professional portrait (Unsplash License). Represents our team — swap with your own photo anytime. */
+  teamGuide: {
+    src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f2e?w=560&q=85&auto=format&fit=crop',
+    alt: 'A friendly member of our team — we are here to guide you',
+  },
 } as const

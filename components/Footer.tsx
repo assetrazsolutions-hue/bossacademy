@@ -39,7 +39,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/programs" className={linkClass}>
-                  View all
+                  All programs
                 </Link>
               </li>
             </ul>

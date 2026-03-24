@@ -9,7 +9,7 @@ export default function HomeDecisionSupport() {
           Start with the free workshop. We&apos;ll guide you based on your goals.
         </p>
         <Link href="/register" className="btn-cta px-8 py-3">
-          Get My Free Seat Now
+          Start Learning Now
         </Link>
       </div>
     </section>

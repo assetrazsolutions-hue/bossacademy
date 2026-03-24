@@ -40,7 +40,7 @@ const primaryCards: Card[] = [
     label: 'Hospitals',
     description:
       'Train staff in patient care, hospital administration, billing, and digital systems to reduce errors and improve patient experience.',
-    cta: 'Start Your Career',
+    cta: 'Start Learning Now',
     icon: MessageCircle,
   },
   {
@@ -49,7 +49,7 @@ const primaryCards: Card[] = [
     label: 'Corporate Organizations',
     description:
       'Upskill employees in digital tools, leadership, and emerging technologies to boost productivity and business growth.',
-    cta: 'Start Your Career',
+    cta: 'Start Learning Now',
     icon: Building2,
   },
   {
@@ -58,7 +58,7 @@ const primaryCards: Card[] = [
     label: 'Industrial & Manufacturing',
     description:
       'Develop skilled technicians in EV, electrical systems, safety, and operations to improve throughput and reduce downtime.',
-    cta: 'Start Your Career',
+    cta: 'Start Learning Now',
     icon: Car,
   },
   {
@@ -76,7 +76,7 @@ const primaryCards: Card[] = [
     label: 'Trainers / Partners',
     description:
       'Join as a trainer or partner to deliver high-impact training programs across industries.',
-    cta: 'Apply Now',
+    cta: 'Apply as trainer',
     icon: Users,
   },
 ]
@@ -88,7 +88,7 @@ const moreCards: Card[] = [
     label: 'Startups & Small Businesses',
     description:
       'Support lean teams with practical training that accelerates product delivery, customer acquisition, and market readiness.',
-    cta: 'Start Your Career',
+    cta: 'Start Learning Now',
     icon: Lightbulb,
   },
   {
@@ -97,7 +97,7 @@ const moreCards: Card[] = [
     label: 'IT & Tech',
     description:
       'Build strong engineering and operations teams with upskilling in modern stacks, tools, and delivery practices.',
-    cta: 'Start Your Career',
+    cta: 'Start Learning Now',
     icon: CircuitBoard,
   },
   {
@@ -106,7 +106,7 @@ const moreCards: Card[] = [
     label: 'EV & Automotive',
     description:
       'Create EV-ready technicians and engineers through hands-on training in EV systems and diagnostics that improves service quality.',
-    cta: 'Start Your Career',
+    cta: 'Start Learning Now',
     icon: Car,
   },
   {
@@ -196,9 +196,9 @@ export default function IndustryPartnershipsSection() {
               href={WHATSAPP_ADVISOR_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-cta px-5 py-2.5 text-sm justify-center"
+              className="btn-outline px-5 py-2.5 text-sm justify-center"
             >
-              WhatsApp
+              Get Free Guidance
             </a>
           </div>
         </motion.div>
@@ -212,7 +212,7 @@ export default function IndustryPartnershipsSection() {
             onClick={() => setShowMore((prev) => !prev)}
             className="mt-6 btn-cta inline-flex items-center gap-2 px-6 py-2.5 text-sm"
           >
-            {showMore ? 'Show Less' : 'Explore More Industries'}
+            {showMore ? 'Show less' : 'More industries'}
             <span className={`transition-transform ${showMore ? 'rotate-180' : ''}`}>{showMore ? '↑' : '↓'}</span>
           </button>
         </div>

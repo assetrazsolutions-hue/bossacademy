@@ -225,7 +225,7 @@ export default function TrainerJoinSection() {
               disabled={isSubmitting}
               className="btn-cta w-full px-6 py-3.5 justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-md disabled:hover:translate-y-0 disabled:active:scale-100"
             >
-              {isSubmitting ? 'Submitting…' : 'Submit application'}
+              {isSubmitting ? 'Sending…' : 'Send application'}
             </button>
           </form>
         </div>

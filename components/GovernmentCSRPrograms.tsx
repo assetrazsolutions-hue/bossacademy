@@ -14,7 +14,7 @@ export default function GovernmentCSRPrograms() {
       title: 'Government skill programs',
       description:
         'Support for national skill initiatives: healthcare training, digital literacy, and youth employability.',
-      buttonText: 'Partner with us',
+      buttonText: 'Start Learning Now',
       icon: <Landmark className="w-10 h-10" strokeWidth={1.5} />,
     },
     {
@@ -28,7 +28,7 @@ export default function GovernmentCSRPrograms() {
       title: 'NGO & social impact',
       description:
         'Youth and community training aligned with empowerment and livelihood outcomes.',
-      buttonText: 'Work with us',
+      buttonText: 'Start Learning Now',
       icon: <Users className="w-10 h-10" strokeWidth={1.5} />,
     },
   ]

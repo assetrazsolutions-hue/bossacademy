@@ -129,7 +129,7 @@ export default function CareerPathway() {
             href="/register"
             className="btn-cta px-8 py-3"
           >
-            Register for Training
+            Start Learning Now
           </a>
         </div>
       </div>

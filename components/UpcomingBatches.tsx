@@ -79,7 +79,7 @@ export default function UpcomingBatches() {
                       href="/register"
                       className="btn-cta px-4 py-2 text-xs sm:text-sm shadow hover:scale-105"
                     >
-                      Register
+                      Start Learning Now
                     </Link>
                   </td>
                 </tr>

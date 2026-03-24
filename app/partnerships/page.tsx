@@ -4,6 +4,7 @@ import GovernmentCSRPrograms from '@/components/GovernmentCSRPrograms'
 import TrainerOverviewSection from '@/components/TrainerOverviewSection'
 import Link from 'next/link'
 import PageHero from '@/components/PageHero'
+import { WHATSAPP_ADVISOR_URL } from '@/lib/whatsapp'
 
 export default function PartnershipsPage() {
   return (
@@ -35,14 +36,24 @@ export default function PartnershipsPage() {
           <p className="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed">
             Tell us about your organization and we&apos;ll suggest a training approach that fits.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/register" className="btn-cta px-8 py-3.5 text-base md:text-lg justify-center">
-              Start an inquiry
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
+            <Link href="/programs" className="btn-cta px-8 py-3.5 text-base md:text-lg justify-center shadow-lg shadow-black/10">
+              Start Learning Now
             </Link>
-            <Link href="/contact" className="btn-cta-outline-light px-8 py-3.5 text-base md:text-lg justify-center">
-              Contact us
-            </Link>
+            <a
+              href={WHATSAPP_ADVISOR_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline px-8 py-3.5 text-base md:text-lg justify-center bg-white text-primary-600 border-primary-600"
+            >
+              Get Free Guidance
+            </a>
           </div>
+          <p className="mt-8 text-sm text-blue-100/95">
+            <Link href="/contact" className="font-medium underline underline-offset-4 decoration-white/40 hover:decoration-white">
+              Organization or partnership inquiry
+            </Link>
+          </p>
         </div>
       </section>
     </div>

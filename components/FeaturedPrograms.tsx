@@ -111,7 +111,7 @@ export default function FeaturedPrograms({ background = 'surface' }: FeaturedPro
       <div className="section-container">
         <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
           <p className="text-sm font-semibold text-primary-600 uppercase tracking-wide mb-3">
-            Explore our core training programs
+            Core training programs
           </p>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Featured industry training programs

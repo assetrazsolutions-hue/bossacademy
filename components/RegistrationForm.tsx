@@ -223,7 +223,7 @@ export default function RegistrationForm() {
         disabled={isSubmitting}
         className="btn-cta w-full px-6 py-3.5 justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-md disabled:hover:translate-y-0 disabled:active:scale-100"
       >
-        {isSubmitting ? 'Submitting…' : 'Submit registration'}
+        {isSubmitting ? 'Sending…' : 'Start Learning Now'}
       </button>
 
       <p className="text-center text-sm text-slate-600">
