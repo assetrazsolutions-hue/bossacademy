@@ -22,7 +22,8 @@ export const siteImages = {
     },
   },
   whyMentor: {
-    src: 'https://images.unsplash.com/photo-1524178232363-1b2c1d9d0d3c?w=900&q=85&auto=format&fit=crop',
+    /** Verified 200 OK — previous photo ID returned 404 from Unsplash */
+    src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=85&auto=format&fit=crop',
     alt: 'Team learning together with a mentor in a modern workspace',
   },
 } as const
