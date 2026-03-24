@@ -13,7 +13,7 @@ const courses = [
       'Templates and workflows you can reuse on the job',
       'Clear communication for teams and managers',
     ],
-    duration: '2–3 weeks',
+    duration: '2-3 weeks',
     icon: Laptop,
     cta: 'Start Learning Now',
     ctaHref: '/programs/office',
@@ -28,7 +28,7 @@ const courses = [
       'Dashboards and reports that look like real work samples',
       'Practice with questions similar to actual business decisions',
     ],
-    duration: '60–90 days',
+    duration: '60-90 days',
     icon: BarChart3,
     cta: 'Start Learning Now',
     ctaHref: '/programs/data',
@@ -71,7 +71,7 @@ export default function HomeCoreCourses() {
               What to start first
             </h3>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-6 text-center sm:text-left">
-              New to workplace tools? Start with <strong className="font-semibold text-slate-800">Office</strong> — it is
+              New to workplace tools? Start with <strong className="font-semibold text-slate-800">Office</strong>. It is
               the shortest track and gives you a practical base for almost any path. Then add{' '}
               <strong className="font-semibold text-slate-800">Data</strong> if you want analyst-style roles, or{' '}
               <strong className="font-semibold text-slate-800">Marketing</strong> if you want campaigns or online income.
@@ -81,7 +81,7 @@ export default function HomeCoreCourses() {
               <div className="rounded-card border border-primary-100 bg-primary-50/40 p-4 md:p-5">
                 <p className="font-heading text-sm font-semibold text-primary-800 mb-2">Aiming for a job</p>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Office plus Data or Marketing helps you build real tasks and samples you can talk about in interviews —
+                  Office plus Data or Marketing helps you build real tasks and samples you can talk about in interviews,
                   not just a list of course names on your CV.
                 </p>
               </div>

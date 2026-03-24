@@ -1,6 +1,6 @@
 /**
  * BOSS wordmark: unified primary blue, geometric sans, single base bar.
- * Building Outstanding Smart Skills — Global Academy of Technology
+ * Building Outstanding Smart Skills: Global Academy of Technology
  */
 type BrandLogoProps = {
   /** `light`: primary blue on white. `dark`: light wordmark for dark backgrounds (e.g. footer). */

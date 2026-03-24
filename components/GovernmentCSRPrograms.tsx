@@ -42,7 +42,7 @@ export default function GovernmentCSRPrograms() {
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
             We work with government bodies, CSR funds, and NGOs to deliver training that scales, with practical
-            delivery, not slide-only workshops. Share your mandate and timeline — we&apos;ll respond with a realistic
+            delivery, not slide-only workshops. Share your mandate and timeline, and we&apos;ll respond with a realistic
             scope.
           </p>
         </div>

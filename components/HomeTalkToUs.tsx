@@ -28,7 +28,7 @@ export default function HomeTalkToUs() {
           <div className="flex-1 min-w-0 text-center md:text-left relative z-0">
             <h2 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 mb-3">Talk to us directly</h2>
             <p className="text-slate-600 leading-relaxed mb-6">
-              We&apos;re here to guide you — feel free to reach out and ask anything.
+              We&apos;re here to guide you, feel free to reach out and ask anything.
             </p>
             <a
               href={WHATSAPP_ADVISOR_URL}

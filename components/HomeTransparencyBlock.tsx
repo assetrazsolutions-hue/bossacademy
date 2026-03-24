@@ -6,7 +6,7 @@ export default function HomeTransparencyBlock() {
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-slate-900 mb-4 text-balance">Built for Beginners</h2>
           <p className="text-slate-600 leading-relaxed mb-4">
             We are focused on helping individuals who are starting from zero. Our programs are designed to be simple,
-            practical, and easy to follow — with guidance provided step-by-step when you need it.
+            practical, and easy to follow, with guidance provided step-by-step when you need it.
           </p>
           <p className="text-slate-600 leading-relaxed text-sm md:text-base">
             We are continuously growing and improving our programs based on real learning outcomes and feedback, not

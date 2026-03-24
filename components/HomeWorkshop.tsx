@@ -3,7 +3,7 @@ import { CheckCircle2 } from 'lucide-react'
 import { NEXT_WORKSHOP_WHEN } from '@/lib/workshop-schedule'
 
 const bullets = [
-  'How to go from zero skills to job-ready in 60–90 days',
+  'How to go from zero skills to job-ready in 60-90 days',
   'The exact skills companies expect from freshers',
   'Live demo of real tasks (Excel, marketing, reports)',
   'How to choose the right path (Job vs Freelancing)',

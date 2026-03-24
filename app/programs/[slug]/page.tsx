@@ -159,7 +159,7 @@ export default async function CoursePage({ params }: Props) {
             Fits <strong className="text-slate-700 font-medium">students</strong>,{' '}
             <strong className="text-slate-700 font-medium">job seekers</strong>,{' '}
             <strong className="text-slate-700 font-medium">beginners</strong>, and{' '}
-            <strong className="text-slate-700 font-medium">career switchers</strong> — we start from where you are.
+            <strong className="text-slate-700 font-medium">career switchers</strong>. We start from where you are.
           </p>
         </div>
       </section>

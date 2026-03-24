@@ -38,8 +38,8 @@ export const programs: CourseProgram[] = [
     title: 'AI-Powered Office Professional',
     outcome: 'Build everyday workplace skills you can describe clearly in interviews.',
     heroSubtitle:
-      'Go from zero to confident with documents, spreadsheets, email, and AI-assisted workflows — the skills most offices use every week.',
-    duration: '2–3 weeks',
+      'Go from zero to confident with documents, spreadsheets, email, and AI-assisted workflows: the skills most offices use every week.',
+    duration: '2-3 weeks',
     summary:
       'Hands-on practice with documents, spreadsheets, email, and AI-assisted workflows so you can contribute confidently in office and admin roles.',
     icon: Laptop,
@@ -65,12 +65,12 @@ export const programs: CourseProgram[] = [
     ableToDo: [
       'Send clear, structured emails and follow-ups people actually reply to',
       'Build and update spreadsheets your team can rely on for status and numbers',
-      'Use AI to draft first versions of summaries and messages — then refine with judgment',
+      'Use AI to draft first versions of summaries and messages, then refine with judgment',
       'Turn messy notes into short updates managers can scan in seconds',
     ],
     learnByDoing: {
       intro:
-        'You learn by repeating short, realistic tasks — not long theory blocks. Each module ends with something you could describe in an interview.',
+        'You learn by repeating short, realistic tasks, not long theory blocks. Each module ends with something you could describe in an interview.',
       tasks: [
         'Fix and format a real-looking report or tracker',
         'Reply to a mock client or manager email with the right tone',
@@ -82,10 +82,10 @@ export const programs: CourseProgram[] = [
       support: 'WhatsApp for questions, step-by-step guidance, and batch-based check-ins',
     },
     whyThisCourse: [
-      'Practical learning — you practice tasks, not only watch slides',
-      'Beginner-friendly — we start from basics and build in order',
-      'Real tools — Excel/Sheets, docs, email, and common AI assistants',
-      'Step-by-step guidance — clear order so you are not overwhelmed',
+      'Practical learning: you practice tasks, not only watch slides',
+      'Beginner-friendly: we start from basics and build in order',
+      'Real tools: Excel/Sheets, docs, email, and common AI assistants',
+      'Step-by-step guidance: clear order so you are not overwhelmed',
     ],
     faq: [
       {
@@ -94,7 +94,7 @@ export const programs: CourseProgram[] = [
       },
       {
         q: 'Will this guarantee me a job?',
-        a: 'We do not promise job placement. You will leave with tasks and examples you can explain clearly — which helps in interviews.',
+        a: 'We do not promise job placement. You will leave with tasks and examples you can explain clearly, which helps in interviews.',
       },
       {
         q: 'Is AI required for every assignment?',
@@ -111,8 +111,8 @@ export const programs: CourseProgram[] = [
     title: 'Data Analytics & Business Intelligence',
     outcome: 'Learn to turn data into clear answers and simple visuals employers understand.',
     heroSubtitle:
-      'Move from “I opened a spreadsheet” to “here is what the data suggests” — with charts, short summaries, and plain language.',
-    duration: '60–90 days',
+      'Move from “I opened a spreadsheet” to “here is what the data suggests”, with charts, short summaries, and plain language.',
+    duration: '60-90 days',
     summary:
       'From cleaning and exploring data to charts and short summaries, aligned with how teams actually use analytics in small and mid-sized organizations.',
     icon: BarChart3,
@@ -155,10 +155,10 @@ export const programs: CourseProgram[] = [
       support: 'WhatsApp for doubts, structured milestones, and feedback on practice work',
     },
     whyThisCourse: [
-      'Practical learning — projects look like junior analyst work samples',
-      'Beginner-friendly — we introduce analysis in steps, not all at once',
-      'Real tools — spreadsheets plus intro BI-style reporting',
-      'Step-by-step guidance — from question to chart to story',
+      'Practical learning: projects look like junior analyst work samples',
+      'Beginner-friendly: we introduce analysis in steps, not all at once',
+      'Real tools: spreadsheets plus intro BI-style reporting',
+      'Step-by-step guidance: from question to chart to story',
     ],
     faq: [
       {
@@ -171,7 +171,7 @@ export const programs: CourseProgram[] = [
       },
       {
         q: 'Will I be a data scientist after this?',
-        a: 'No — this is oriented toward business analytics and reporting foundations, not advanced modeling.',
+        a: 'No. This is oriented toward business analytics and reporting foundations, not advanced modeling.',
       },
       {
         q: 'Can I do this while job searching?',
@@ -184,7 +184,7 @@ export const programs: CourseProgram[] = [
     title: 'Digital Marketing & Freelancing',
     outcome: 'Learn practical marketing skills for a job or your first paid projects online.',
     heroSubtitle:
-      'Understand channels, run small campaigns, and produce deliverables you can show to employers — or to your first clients.',
+      'Understand channels, run small campaigns, and produce deliverables you can show to employers, or to your first clients.',
     duration: 'Flexible pace',
     summary:
       'Channel fundamentals, simple campaigns, and deliverables you can show to employers or early clients, without pretending you need a big agency background.',
@@ -216,7 +216,7 @@ export const programs: CourseProgram[] = [
     ],
     learnByDoing: {
       intro:
-        'You work from briefs similar to real small-business or internship tasks — short, concrete, and portfolio-friendly.',
+        'You work from briefs similar to real small-business or internship tasks: short, concrete, and portfolio-friendly.',
       tasks: [
         'Build a mini campaign plan for a sample product or service',
         'Create a simple creative + caption set and explain why',
@@ -228,10 +228,10 @@ export const programs: CourseProgram[] = [
       support: 'WhatsApp for questions, templates for deliverables, and guidance on priorities',
     },
     whyThisCourse: [
-      'Practical learning — deliverables you can show, not only notes',
-      'Beginner-friendly — channels explained in plain language first',
-      'Real tools — common ad and analytics surfaces at intro depth',
-      'Step-by-step guidance — from idea to small campaign to recap',
+      'Practical learning: deliverables you can show, not only notes',
+      'Beginner-friendly: channels explained in plain language first',
+      'Real tools: common ad and analytics surfaces at intro depth',
+      'Step-by-step guidance: from idea to small campaign to recap',
     ],
     faq: [
       {
@@ -248,7 +248,7 @@ export const programs: CourseProgram[] = [
       },
       {
         q: 'How long until I can earn?',
-        a: 'It depends on your pace and niche. We focus on skills and small wins first — not overnight income promises.',
+        a: 'It depends on your pace and niche. We focus on skills and small wins first, not overnight income promises.',
       },
     ],
   },

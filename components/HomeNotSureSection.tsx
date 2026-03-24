@@ -10,7 +10,7 @@ export default function HomeNotSureSection() {
         <p className="text-lg text-slate-600 leading-relaxed mb-2">
           We&apos;ll help you choose the right course based on your background and goals.
         </p>
-        <p className="text-sm text-slate-500 mb-8">Guidance provided step-by-step — ask us anything.</p>
+        <p className="text-sm text-slate-500 mb-8">Guidance provided step-by-step. Ask us anything.</p>
         <a
           href={WHATSAPP_ADVISOR_URL}
           target="_blank"

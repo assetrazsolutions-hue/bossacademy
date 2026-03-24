@@ -28,7 +28,7 @@ body {
 }
 
 @layer components {
-  /** Primary CTA — orange, conversion */
+  /** Primary CTA: orange, conversion */
   .btn-cta {
     @apply inline-flex items-center justify-center rounded-card bg-accent-500 text-white font-semibold;
     @apply shadow-md shadow-accent-500/25;
@@ -37,7 +37,7 @@ body {
     @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600;
   }
 
-  /** Secondary — blue outline (on light backgrounds) */
+  /** Secondary: blue outline (on light backgrounds) */
   .btn-outline {
     @apply inline-flex items-center justify-center rounded-card border-2 border-primary-600 bg-white text-primary-600 font-semibold;
     @apply hover:bg-primary-50 hover:border-primary-700 hover:text-primary-700 hover:-translate-y-0.5;

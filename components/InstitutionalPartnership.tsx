@@ -170,7 +170,7 @@ export default function IndustryPartnershipsSection() {
           </h2>
           <p className="mt-4 text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
             Custom training aligned to your teams, with practical delivery and measurable outcomes. Tell us your sector
-            and goals — we&apos;ll suggest a format that fits (on-site, cohort, or hybrid).
+            and goals, and we&apos;ll suggest a format that fits (on-site, cohort, or hybrid).
           </p>
         </motion.div>
 
