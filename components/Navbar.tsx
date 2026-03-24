@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import BrandLogo from '@/components/BrandLogo'
 
 const navLink =
   'text-slate-600 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors duration-200'
@@ -15,15 +16,10 @@ export default function Navbar() {
         <div className="flex justify-between items-center min-h-[4rem] md:min-h-[4.5rem] py-2 md:py-2.5">
           <Link
             href="/"
-            className="flex-shrink-0 flex flex-col gap-1 group py-1"
+            className="flex-shrink-0 group py-1"
             aria-label="BOSS Global Academy of Technology, home"
           >
-            <span className="font-heading text-[1.875rem] sm:text-[2.125rem] md:text-[2.5rem] font-extrabold text-primary-600 tracking-[-0.035em] leading-[0.95] group-hover:text-primary-700 transition-colors">
-              BOSS
-            </span>
-            <span className="text-[0.6875rem] sm:text-xs md:text-sm font-medium text-slate-500 leading-snug tracking-wide max-w-[17rem]">
-              Global Academy of Technology
-            </span>
+            <BrandLogo variant="light" size="lg" interactive />
           </Link>
 
           <div className="hidden md:flex md:items-center md:gap-1 lg:gap-2">

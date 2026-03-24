@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BrandLogo from '@/components/BrandLogo'
 import { WHATSAPP_ADVISOR_URL } from '@/lib/whatsapp'
 
 const linkClass = 'text-slate-400 hover:text-white transition-colors duration-200 text-sm'
@@ -9,10 +10,9 @@ export default function Footer() {
       <div className="section-container py-14 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="sm:col-span-2 lg:col-span-1">
-            <p className="font-heading text-xl font-bold text-white mb-1">BOSS</p>
-            <p className="text-xs font-medium text-slate-500 mb-3 leading-snug">
-              Global Academy of Technology
-            </p>
+            <Link href="/" className="inline-block mb-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 rounded-sm">
+              <BrandLogo variant="dark" size="sm" />
+            </Link>
             <p className="text-sm leading-relaxed max-w-xs">
               Practical training for careers in the office, in data, and online, built for beginners who want real
               skills.

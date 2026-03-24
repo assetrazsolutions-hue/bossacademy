@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120" role="img" aria-labelledby="title desc">
+  <title id="title">BOSS Global Academy of Technology</title>
+  <desc id="desc">Wordmark BOSS with final S in orange and accent bar. Building Outstanding Smart Skills.</desc>
+  <rect width="320" height="120" fill="#ffffff"/>
+  <text x="24" y="58" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="42" font-weight="800" letter-spacing="-0.06em" fill="#2563EB">BOS</text>
+  <text x="132" y="58" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="42" font-weight="800" letter-spacing="-0.06em" fill="#F97316">S</text>
+  <rect x="24" y="68" width="200" height="4" rx="2" fill="#2563EB"/>
+  <rect x="212" y="68" width="56" height="4" rx="2" fill="#F97316"/>
+  <text x="24" y="100" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="500" fill="#475569">Global Academy of Technology</text>
+</svg>
