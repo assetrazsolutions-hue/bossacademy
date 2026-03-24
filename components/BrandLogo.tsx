@@ -1,5 +1,5 @@
 /**
- * BOSS wordmark: BOS + orange S, geometric sans, base accent bar.
+ * BOSS wordmark: one cohesive word (BOS + orange S), geometric sans, base accent bar.
  * Building Outstanding Smart Skills — Global Academy of Technology
  */
 type BrandLogoProps = {
@@ -14,19 +14,22 @@ type BrandLogoProps = {
 
 const sizeClasses = {
   lg: {
-    word: 'text-[1.875rem] sm:text-[2.125rem] md:text-[2.5rem] leading-[0.92]',
-    sub: 'text-[0.6875rem] sm:text-xs md:text-sm mt-2',
-    bar: 'mt-2.5 h-[3px]',
+    word: 'text-[1.875rem] sm:text-[2.125rem] md:text-[2.5rem] leading-none',
+    sub: 'text-[0.6875rem] sm:text-[0.8125rem] md:text-[0.875rem]',
+    bar: 'mt-[0.4rem] sm:mt-[0.45rem] md:mt-[0.5rem] h-[3px]',
+    subGap: 'mt-[0.35rem] sm:mt-2',
   },
   md: {
-    word: 'text-2xl sm:text-3xl leading-[0.92]',
-    sub: 'text-[0.65rem] sm:text-xs mt-1.5',
+    word: 'text-2xl sm:text-3xl leading-none',
+    sub: 'text-[0.65rem] sm:text-xs',
     bar: 'mt-2 h-[3px]',
+    subGap: 'mt-1.5',
   },
   sm: {
-    word: 'text-xl leading-[0.92]',
-    sub: 'text-[0.65rem] mt-1.5',
-    bar: 'mt-2 h-[2.5px]',
+    word: 'text-xl leading-none',
+    sub: 'text-[0.65rem]',
+    bar: 'mt-[0.35rem] h-[2.5px]',
+    subGap: 'mt-1.5',
   },
 } as const
 
@@ -41,27 +44,31 @@ export default function BrandLogo({
 
   const bosClass = isLight ? 'text-primary-600' : 'text-white'
   const lastSClass = isLight ? 'text-accent-500' : 'text-accent-500'
-  const barLeft = isLight ? 'bg-primary-600' : 'bg-white/85'
+  const barLeft = isLight ? 'bg-primary-600' : 'bg-white/90'
   const barRight = 'bg-accent-500'
-  /** Light: spec #475569 (slate-600). Dark footer: readable gray on slate-900. */
-  const subClass = isLight ? 'text-[#475569] font-medium' : 'text-slate-400 font-medium'
+  /** Tighter subtitle, step up from medium → semibold */
+  const subClass = isLight ? 'text-[#475569] font-semibold' : 'text-slate-400 font-semibold'
+
+  const hoverBos = interactive ? 'group-hover:text-primary-700 transition-colors duration-200' : ''
+  const hoverS = interactive ? 'group-hover:text-accent-600 transition-colors duration-200' : ''
 
   return (
     <div className={`inline-flex flex-col w-fit ${className}`}>
-      <div className={`inline-flex items-baseline font-heading font-extrabold uppercase tracking-[-0.07em] ${s.word}`}>
-        <span className={`${bosClass} ${interactive ? 'group-hover:text-primary-700 transition-colors duration-200' : ''}`}>
-          BOS
-        </span>
-        <span className={`${lastSClass} tracking-[-0.06em] ${interactive ? 'group-hover:text-accent-600 transition-colors duration-200' : ''}`}>
-          S
-        </span>
+      {/* Single optical line: shared tracking + weight so BOSS reads as one word; orange S tucked with negative margin */}
+      <div
+        className={`inline-flex items-baseline font-heading font-extrabold uppercase ${s.word} tracking-[-0.065em]`}
+      >
+        <span className={`${bosClass} ${hoverBos}`}>BOS</span>
+        <span className={`${lastSClass} ${hoverS} -ml-[0.03em]`}>S</span>
       </div>
-      {/* Minimal base bar: blue span + orange accent segment (no gradient) */}
-      <div className={`flex w-full gap-0.5 rounded-sm overflow-hidden ${s.bar}`} aria-hidden>
-        <span className={`flex-[2.1] min-w-0 rounded-sm ${barLeft}`} />
-        <span className={`flex-[0.65] min-w-0 rounded-sm ${barRight}`} />
+      {/* Flush two-tone bar — no gap, shared edge for a clean underline */}
+      <div className={`flex w-full gap-0 overflow-hidden rounded-sm ${s.bar}`} aria-hidden>
+        <span className={`min-h-0 flex-[2.05] rounded-l-sm ${barLeft}`} />
+        <span className={`min-h-0 flex-[0.7] rounded-r-sm ${barRight}`} />
       </div>
-      <p className={`${s.sub} ${subClass} tracking-wide leading-snug max-w-[17rem]`}>
+      <p
+        className={`${s.sub} ${s.subGap} ${subClass} tracking-[-0.02em] leading-tight max-w-[16.5rem]`}
+      >
         Global Academy of Technology
       </p>
     </div>
