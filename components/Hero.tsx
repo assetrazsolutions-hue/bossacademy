@@ -25,7 +25,7 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-stretch sm:items-center">
               <Link href="/programs" className="btn-cta px-7 py-3.5 text-base md:text-lg justify-center">
-                Explore programs
+                Start Learning Now
               </Link>
               <a
                 href={WHATSAPP_ADVISOR_URL}
@@ -33,7 +33,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="btn-outline px-7 py-3.5 text-base md:text-lg justify-center"
               >
-                Talk to an advisor
+                Get Free Guidance
               </a>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { WHATSAPP_ADVISOR_URL } from '@/lib/whatsapp'
 
 const linkClass = 'text-slate-400 hover:text-white transition-colors duration-200 text-sm'
 
@@ -85,7 +86,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/919916800685"
+                  href={WHATSAPP_ADVISOR_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${linkClass} inline-flex items-center gap-2`}

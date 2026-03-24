@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import HomeTrustStrip from '@/components/HomeTrustStrip'
 import HomeWhoFor from '@/components/HomeWhoFor'
 import HomeCoreCourses from '@/components/HomeCoreCourses'
+import HomeNotSureSection from '@/components/HomeNotSureSection'
 import HomeWhyChooseUs from '@/components/HomeWhyChooseUs'
 import HomeHowItWorks from '@/components/HomeHowItWorks'
 import HomeTestimonials from '@/components/HomeTestimonials'
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeTrustStrip />
       <HomeWhoFor />
       <HomeCoreCourses />
+      <HomeNotSureSection />
       <HomeWhyChooseUs />
       <HomeHowItWorks />
       <HomeTestimonials />
