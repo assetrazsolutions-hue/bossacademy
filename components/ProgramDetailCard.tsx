@@ -33,7 +33,19 @@ export default function ProgramDetailCard({ program }: { program: ProgramDetail 
         <div className="text-slate-400 mb-4">
           <Icon className="w-12 h-12 md:w-14 md:h-14" aria-hidden />
         </div>
-        <h2 className="font-heading text-xl md:text-2xl font-bold text-slate-900 mb-2">{program.title}</h2>
+        <h2 className="font-heading text-xl md:text-2xl font-bold text-slate-900 mb-2">
+          <Link href={`/programs/${program.id}`} className="hover:text-primary-700 transition-colors">
+            {program.title}
+          </Link>
+        </h2>
+        <p className="mb-3">
+          <Link
+            href={`/programs/${program.id}`}
+            className="text-sm font-semibold text-primary-600 hover:text-primary-700"
+          >
+            Full course details →
+          </Link>
+        </p>
         <p className="text-primary-700 font-semibold text-sm md:text-base mb-1">{program.outcome}</p>
         <p className="text-sm text-slate-500 mb-3">Duration: {program.duration}</p>
         <p className="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">

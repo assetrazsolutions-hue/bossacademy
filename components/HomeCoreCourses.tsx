@@ -16,7 +16,7 @@ const courses = [
     duration: '2–3 weeks',
     icon: Laptop,
     cta: 'Start Learning Now',
-    ctaHref: '/programs#office',
+    ctaHref: '/programs/office',
     imageKey: 'office' as const,
   },
   {
@@ -31,7 +31,7 @@ const courses = [
     duration: '60–90 days',
     icon: BarChart3,
     cta: 'Start Learning Now',
-    ctaHref: '/programs#data',
+    ctaHref: '/programs/data',
     imageKey: 'data' as const,
   },
   {
@@ -46,7 +46,7 @@ const courses = [
     duration: 'Flexible pace',
     icon: Megaphone,
     cta: 'Start Learning Now',
-    ctaHref: '/programs#marketing',
+    ctaHref: '/programs/marketing',
     imageKey: 'marketing' as const,
   },
 ]
