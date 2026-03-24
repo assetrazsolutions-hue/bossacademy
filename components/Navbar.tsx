@@ -48,8 +48,8 @@ export default function Navbar() {
           </div>
 
           <div className="md:hidden flex items-center gap-2">
-            <Link href="/programs" className="btn-cta-nav text-xs px-3 py-1.5">
-              Start Learning
+            <Link href="/programs" className="btn-cta-nav text-[0.6875rem] sm:text-xs px-2.5 sm:px-3 py-1.5 whitespace-nowrap leading-tight">
+              Start Learning Now
             </Link>
             <button
               type="button"

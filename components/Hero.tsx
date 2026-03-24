@@ -19,8 +19,11 @@ export default function Hero() {
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-[1.12] text-balance mb-6">
               Build real skills. Start your career with confidence.
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10">
+            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-3">
               Practical, hands-on programs for students, job seekers, and beginners. No prior experience required.
+            </p>
+            <p className="text-sm text-slate-500 max-w-xl mx-auto lg:mx-0 mb-8">
+              Designed for beginners starting from zero.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-stretch sm:items-center">

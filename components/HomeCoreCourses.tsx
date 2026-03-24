@@ -30,7 +30,7 @@ const courses = [
     ],
     duration: '60–90 days',
     icon: BarChart3,
-    cta: 'Build data skills',
+    cta: 'Start Learning Now',
     ctaHref: '/programs#data',
     imageKey: 'data' as const,
   },
@@ -95,7 +95,7 @@ export default function HomeCoreCourses() {
                   <p className="text-primary-700 font-semibold text-base leading-snug mb-2">{course.headline}</p>
                   <h3 className="font-heading text-lg font-bold text-slate-900 mb-1">{course.title}</h3>
                   <p className="text-sm text-slate-500 mb-1">Duration: {course.duration}</p>
-                  <p className="text-xs text-slate-500 mb-6">Limited seats per batch · Next batch starting soon</p>
+                  <p className="text-xs text-slate-500 mb-6">Limited seats per batch · New batches starting regularly</p>
                   <ul className="mb-8 space-y-3 text-sm text-slate-600 flex-1">
                     {course.bullets.map((line) => (
                       <li key={line} className="flex gap-3 leading-relaxed">

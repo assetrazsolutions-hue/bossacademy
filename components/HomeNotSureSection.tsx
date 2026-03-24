@@ -7,9 +7,10 @@ export default function HomeNotSureSection() {
         <h2 className="font-heading text-2xl sm:text-3xl md:text-[2rem] font-bold text-slate-900 mb-4 text-balance">
           Not Sure Where to Start?
         </h2>
-        <p className="text-lg text-slate-600 leading-relaxed mb-8">
+        <p className="text-lg text-slate-600 leading-relaxed mb-2">
           We&apos;ll help you choose the right course based on your background and goals.
         </p>
+        <p className="text-sm text-slate-500 mb-8">Guidance provided step-by-step — ask us anything.</p>
         <a
           href={WHATSAPP_ADVISOR_URL}
           target="_blank"

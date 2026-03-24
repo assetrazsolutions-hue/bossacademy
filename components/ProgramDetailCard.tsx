@@ -3,6 +3,24 @@ import { CheckCircle2 } from 'lucide-react'
 import type { ProgramDetail } from '@/lib/programs'
 import { WHATSAPP_ADVISOR_URL } from '@/lib/whatsapp'
 
+function CtaPair() {
+  return (
+    <div className="flex flex-col sm:flex-row gap-2">
+      <Link href="/register" className="btn-cta flex-1 text-center px-4 py-3 text-sm md:text-base justify-center">
+        Start Learning Now
+      </Link>
+      <a
+        href={WHATSAPP_ADVISOR_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-outline flex-1 text-center px-4 py-3 text-sm md:text-base justify-center"
+      >
+        Get Free Guidance
+      </a>
+    </div>
+  )
+}
+
 export default function ProgramDetailCard({ program }: { program: ProgramDetail }) {
   const Icon = program.icon
 
@@ -19,23 +37,13 @@ export default function ProgramDetailCard({ program }: { program: ProgramDetail 
         <p className="text-primary-700 font-semibold text-sm md:text-base mb-1">{program.outcome}</p>
         <p className="text-sm text-slate-500 mb-3">Duration: {program.duration}</p>
         <p className="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
-          <span className="font-medium text-slate-700">Limited seats per batch.</span> Next batch starting soon.
+          <span className="font-medium text-slate-700">Limited seats per batch.</span> New batches starting regularly.
         </p>
 
         <p className="text-slate-600 text-sm md:text-base mb-6 leading-relaxed">{program.summary}</p>
 
-        <div className="flex flex-col sm:flex-row gap-2 mb-8">
-          <Link href="/register" className="btn-cta flex-1 text-center px-4 py-3 text-sm md:text-base justify-center">
-            Start Learning Now
-          </Link>
-          <a
-            href={WHATSAPP_ADVISOR_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline flex-1 text-center px-4 py-3 text-sm md:text-base justify-center"
-          >
-            Get Free Guidance
-          </a>
+        <div className="mb-8">
+          <CtaPair />
         </div>
 
         <div className="space-y-6 flex-1">
@@ -68,6 +76,10 @@ export default function ProgramDetailCard({ program }: { program: ProgramDetail 
             <p className="text-slate-600 text-sm leading-relaxed">{program.realWorldApplication}</p>
           </div>
 
+          <div className="pt-2">
+            <CtaPair />
+          </div>
+
           <div>
             <h3 className="font-heading font-semibold text-slate-900 mb-3 text-sm md:text-base">Who this course is for</h3>
             <ul className="space-y-2">
@@ -82,19 +94,7 @@ export default function ProgramDetailCard({ program }: { program: ProgramDetail 
         </div>
 
         <div className="mt-8 pt-6 border-t border-slate-100 space-y-3">
-          <div className="flex flex-col sm:flex-row gap-2">
-            <Link href="/register" className="btn-cta flex-1 text-center px-4 py-3 text-sm md:text-base justify-center">
-              Start Learning Now
-            </Link>
-            <a
-              href={WHATSAPP_ADVISOR_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline flex-1 text-center px-4 py-3 text-sm md:text-base justify-center"
-            >
-              Get Free Guidance
-            </a>
-          </div>
+          <CtaPair />
           <Link
             href="/contact"
             className="block w-full text-center text-sm font-semibold text-primary-600 hover:text-primary-700 py-2"

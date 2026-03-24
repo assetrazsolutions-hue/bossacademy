@@ -3,8 +3,8 @@ import { ShieldCheck, Sparkles, Target, MessageCircle } from 'lucide-react'
 const items = [
   { icon: ShieldCheck, label: 'Beginner-friendly paths' },
   { icon: Sparkles, label: 'Learn by doing' },
-  { icon: Target, label: 'Outcome-focused programs' },
-  { icon: MessageCircle, label: 'Advisor support on WhatsApp' },
+  { icon: Target, label: 'Focused on practical, real-world skills' },
+  { icon: MessageCircle, label: 'Guidance provided step-by-step' },
 ]
 
 export default function HomeTrustStrip() {

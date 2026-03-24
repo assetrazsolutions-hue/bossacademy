@@ -8,6 +8,7 @@ import HomeHowItWorks from '@/components/HomeHowItWorks'
 import HomeOurApproach from '@/components/HomeOurApproach'
 import HomeWhatYouWillGain from '@/components/HomeWhatYouWillGain'
 import HomeTransparencyBlock from '@/components/HomeTransparencyBlock'
+import HomeTalkToUs from '@/components/HomeTalkToUs'
 import HomeFinalCTA from '@/components/HomeFinalCTA'
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <HomeOurApproach />
       <HomeWhatYouWillGain />
       <HomeTransparencyBlock />
+      <HomeTalkToUs />
       <HomeFinalCTA />
     </div>
   )

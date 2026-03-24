@@ -13,6 +13,12 @@ export default function Programs() {
         conversionCtas={{ primaryHref: '#programs' }}
       />
 
+      <div className="bg-surface border-b border-slate-100/90">
+        <p className="section-container py-3 text-center text-sm text-slate-600">
+          Limited seats per batch · New batches starting regularly · Focused on practical, real-world skills
+        </p>
+      </div>
+
       <div id="programs" className="section-container py-20 md:py-28 scroll-mt-24">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
           {programs.map((program) => (
