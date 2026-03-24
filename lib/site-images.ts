@@ -3,9 +3,13 @@
  * https://unsplash.com/license
  */
 export const siteImages = {
+  /**
+   * Hero: group learning (no single stock portrait). Unsplash License — free for commercial use.
+   * @see https://unsplash.com/license
+   */
   hero: {
-    src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=960&q=85&auto=format&fit=crop',
-    alt: 'Professional working on a laptop in a bright, modern office',
+    src: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=960&q=85&auto=format&fit=crop',
+    alt: 'Learners working together with laptops in a bright, modern study space',
   },
   courses: {
     office: {
