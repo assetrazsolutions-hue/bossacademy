@@ -1,28 +1,68 @@
-import { CheckCircle2 } from 'lucide-react'
+import { Wrench, FolderKanban, HeartHandshake, HeadphonesIcon, Briefcase } from 'lucide-react'
 
-const points = [
-  'Learn by doing real tasks, not just watching videos',
-  'Structured path from basics to career',
-  'Focus on job skills and income skills',
-  'Designed for beginners with no prior experience',
+const differentiators = [
+  {
+    title: 'Practical learning',
+    text: 'Short explanations, then you practice — the same rhythm as real work.',
+    icon: Wrench,
+  },
+  {
+    title: 'Real-world projects',
+    text: 'Assignments you can describe in interviews or add to a simple portfolio.',
+    icon: FolderKanban,
+  },
+  {
+    title: 'Beginner friendly',
+    text: 'Concepts introduced step by step, with support when you get stuck.',
+    icon: HeartHandshake,
+  },
+  {
+    title: 'Career support',
+    text: 'Guidance on skills, projects, and next steps — not just “finish the module.”',
+    icon: HeadphonesIcon,
+  },
+  {
+    title: 'Industry skills',
+    text: 'Tools and tasks aligned with what offices, teams, and clients ask for today.',
+    icon: Briefcase,
+  },
 ]
 
 export default function HomeWhyChooseUs() {
   return (
-    <section id="why-us" className="py-16 md:py-20 bg-white border-t border-gray-100 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.9)]">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-text text-center mb-3">
-          Built for Real Outcomes — Not Just Certificates
-        </h2>
-        <div className="w-16 h-1 bg-cta-500 mx-auto mb-8" />
-        <ul className="space-y-4">
-          {points.map((item) => (
-            <li key={item} className="flex items-start gap-3 text-text-light">
-              <CheckCircle2 className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" aria-hidden />
-              <span className="leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ul>
+    <section id="why-boss" className="py-20 md:py-28 bg-white">
+      <div className="section-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+          <div className="lg:sticky lg:top-28">
+            <p className="text-sm font-semibold text-primary-600 uppercase tracking-wide mb-3">Why choose us</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+              Why BOSS Academy
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-md">
+              We’re built like a modern career platform: clear paths, hands-on work, and support when you need it — not
+              endless theory.
+            </p>
+            <div className="hidden lg:block h-px w-24 bg-gradient-to-r from-primary-600 to-accent-500 rounded-full" />
+          </div>
+
+          <ul className="space-y-4">
+            {differentiators.map(({ title, text, icon: Icon }) => (
+              <li key={title}>
+                <div className="group rounded-card border border-slate-200/90 bg-surface/50 p-6 hover:bg-white hover:border-primary-200 hover:shadow-md transition-all duration-300">
+                  <div className="flex gap-4">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-card bg-white text-primary-600 ring-1 ring-slate-200/80 group-hover:ring-primary-200 transition-all">
+                      <Icon className="w-5 h-5" strokeWidth={2} aria-hidden />
+                    </span>
+                    <div>
+                      <h3 className="font-heading font-semibold text-slate-900 mb-1">{title}</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">{text}</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   )

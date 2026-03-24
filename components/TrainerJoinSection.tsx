@@ -30,7 +30,6 @@ export default function TrainerJoinSection() {
       const { error } = await supabase.from('trainer_applications').insert([payload])
       if (error) throw error
 
-      // Fire-and-forget email notification; failures here won't affect the user
       fetch('/api/trainer-apply', {
         method: 'POST',
         headers: {
@@ -42,6 +41,7 @@ export default function TrainerJoinSection() {
       })
 
       setSubmitStatus('success')
+      e.currentTarget.reset()
     } catch (error) {
       console.error('Error submitting trainer application:', error)
       setSubmitStatus('error')
@@ -51,77 +51,62 @@ export default function TrainerJoinSection() {
   }
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
-            Join BOSS Academy as a Trainer
+    <section className="py-14 md:py-20 bg-surface">
+      <div className="section-container space-y-14 md:space-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="card-elevated p-8 md:p-10 hover:-translate-y-0.5">
+            <h2 className="font-heading text-xl font-bold text-slate-900 mb-3">Part-time trainers</h2>
+            <p className="text-slate-600 mb-5 leading-relaxed">
+              Deliver sessions on weekends or specific modules alongside your professional work.
+            </p>
+            <ul className="space-y-3 text-slate-600 text-sm">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
+                <span>Flexible scheduling around your commitments.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
+                <span>Mentor students and working professionals.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="card-elevated p-8 md:p-10 hover:-translate-y-0.5">
+            <h2 className="font-heading text-xl font-bold text-slate-900 mb-3">Full-time trainers</h2>
+            <p className="text-slate-600 mb-5 leading-relaxed">
+              Lead ongoing programs and institutional partnerships with dedicated assignments.
+            </p>
+            <ul className="space-y-3 text-slate-600 text-sm">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
+                <span>Structured work across multiple programs.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
+                <span>Shape curriculum and new initiatives.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-heading text-lg font-semibold text-slate-900 mb-4 text-center md:text-left">
+            Areas of expertise
           </h2>
-          <div className="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-lg text-text-light max-w-3xl mx-auto">
-            We are looking for passionate professionals and experts to deliver high-impact training programs.
-          </p>
-        </div>
-
-        {/* Trainer types */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-background-dark">
-            <h3 className="text-2xl font-bold text-text mb-3">Part-Time Trainers</h3>
-            <p className="text-text-light mb-4">
-              Industry professionals who can deliver sessions on weekends or specific modules as part of our
-              specialized programs.
-            </p>
-            <ul className="space-y-2 text-text-light text-sm">
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-600 mt-0.5" />
-                <span>Flexible scheduling around your professional commitments.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-600 mt-0.5" />
-                <span>Opportunities to mentor students and working professionals.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-background-dark">
-            <h3 className="text-2xl font-bold text-text mb-3">Full-Time Trainers</h3>
-            <p className="text-text-light mb-4">
-              Dedicated trainers who work with BOSS Global Academy of Technology on ongoing training programs
-              and institutional partnerships.
-            </p>
-            <ul className="space-y-2 text-text-light text-sm">
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-600 mt-0.5" />
-                <span>Structured training assignments across multiple programs.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-600 mt-0.5" />
-                <span>Opportunities to design curriculum and lead new initiatives.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Areas of expertise */}
-        <div className="mb-12">
-          <h3 className="text-xl font-semibold text-text mb-4 text-center md:text-left">
-            Areas of Expertise
-          </h3>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5 justify-center md:justify-start">
             {[
-              'Healthcare & Hospital Administration',
-              'Electric Vehicle (EV) Technology',
-              'Artificial Intelligence & Data Science',
+              'Healthcare & hospital administration',
+              'Electric vehicle (EV) technology',
+              'AI & data science',
               'Cybersecurity',
-              'Electronics & Mobile Repair',
-              'Solar & Electrical Systems',
-              'Soft Skills & Communication',
-              'Corporate Training & Leadership',
+              'Electronics & mobile repair',
+              'Solar & electrical systems',
+              'Soft skills & communication',
+              'Corporate training & leadership',
             ].map((area) => (
               <span
                 key={area}
-                className="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-xs font-semibold"
+                className="inline-flex items-center px-4 py-2 rounded-full bg-primary-600/10 text-primary-800 text-xs font-semibold border border-primary-600/15"
               >
                 {area}
               </span>
@@ -129,72 +114,48 @@ export default function TrainerJoinSection() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mb-10">
-          <Link
-            href="#trainer-application"
-            className="btn-cta px-8 py-3 shadow-md"
-          >
-            Apply as Trainer
+        <div className="text-center">
+          <Link href="#trainer-application" className="btn-cta px-8 py-3.5 inline-flex justify-center">
+            Go to application form
           </Link>
         </div>
 
-        {/* Trainer application form */}
         <div
           id="trainer-application"
-          className="bg-white rounded-xl shadow-lg p-8 border border-background-dark max-w-3xl mx-auto"
+          className="card-elevated max-w-3xl mx-auto p-8 md:p-10 scroll-mt-24 hover:-translate-y-0.5"
         >
-          <h3 className="text-2xl font-bold text-text mb-4 text-center md:text-left">
-            Trainer Application Form
-          </h3>
-          <p className="text-sm text-text-light mb-6 text-center md:text-left">
-            Share your details and our team will get in touch with you regarding trainer opportunities at
-            BOSS Academy.
+          <h2 className="font-heading text-2xl font-bold text-slate-900 mb-2 text-center md:text-left">
+            Trainer application
+          </h2>
+          <p className="text-sm text-slate-600 mb-8 text-center md:text-left leading-relaxed">
+            Share your details and we&apos;ll reach out about opportunities at BOSS Academy.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="trainerName" className="block text-sm font-medium text-text mb-2">
-                  Full Name <span className="text-red-500">*</span>
+                <label htmlFor="trainerName" className="form-label">
+                  Full name <span className="text-red-500">*</span>
                 </label>
-                <input
-                  id="trainerName"
-                  name="trainerName"
-                  type="text"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                />
+                <input id="trainerName" name="trainerName" type="text" required className="input-field" />
               </div>
 
               <div>
-                <label htmlFor="trainerPhone" className="block text-sm font-medium text-text mb-2">
-                  Phone Number <span className="text-red-500">*</span>
+                <label htmlFor="trainerPhone" className="form-label">
+                  Phone number <span className="text-red-500">*</span>
                 </label>
-                <input
-                  id="trainerPhone"
-                  name="trainerPhone"
-                  type="tel"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                />
+                <input id="trainerPhone" name="trainerPhone" type="tel" required className="input-field" />
               </div>
 
               <div>
-                <label htmlFor="trainerEmail" className="block text-sm font-medium text-text mb-2">
+                <label htmlFor="trainerEmail" className="form-label">
                   Email <span className="text-red-500">*</span>
                 </label>
-                <input
-                  id="trainerEmail"
-                  name="trainerEmail"
-                  type="email"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                />
+                <input id="trainerEmail" name="trainerEmail" type="email" required className="input-field" />
               </div>
 
               <div>
-                <label htmlFor="trainerExperience" className="block text-sm font-medium text-text mb-2">
+                <label htmlFor="trainerExperience" className="form-label">
                   Experience (years) <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -203,82 +164,68 @@ export default function TrainerJoinSection() {
                   type="number"
                   min={0}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="input-field"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="trainerExpertise" className="block text-sm font-medium text-text mb-2">
-                Area of Expertise <span className="text-red-500">*</span>
+              <label htmlFor="trainerExpertise" className="form-label">
+                Area of expertise <span className="text-red-500">*</span>
               </label>
-              <select
-                id="trainerExpertise"
-                name="trainerExpertise"
-                required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              >
+              <select id="trainerExpertise" name="trainerExpertise" required className="input-field">
                 <option value="">Select an area</option>
-                <option value="Healthcare & Hospital Administration">Healthcare &amp; Hospital Administration</option>
-                <option value="Electric Vehicle (EV) Technology">Electric Vehicle (EV) Technology</option>
-                <option value="Artificial Intelligence & Data Science">
-                  Artificial Intelligence &amp; Data Science
-                </option>
+                <option value="Healthcare & Hospital Administration">Healthcare &amp; hospital administration</option>
+                <option value="Electric Vehicle (EV) Technology">Electric vehicle (EV) technology</option>
+                <option value="Artificial Intelligence & Data Science">AI &amp; data science</option>
                 <option value="Cybersecurity">Cybersecurity</option>
-                <option value="Electronics & Mobile Repair">Electronics &amp; Mobile Repair</option>
-                <option value="Solar & Electrical Systems">Solar &amp; Electrical Systems</option>
-                <option value="Soft Skills & Communication">Soft Skills &amp; Communication</option>
-                <option value="Corporate Training & Leadership">Corporate Training &amp; Leadership</option>
+                <option value="Electronics & Mobile Repair">Electronics &amp; mobile repair</option>
+                <option value="Solar & Electrical Systems">Solar &amp; electrical systems</option>
+                <option value="Soft Skills & Communication">Soft skills &amp; communication</option>
+                <option value="Corporate Training & Leadership">Corporate training &amp; leadership</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="trainerType" className="block text-sm font-medium text-text mb-2">
-                Preferred Type <span className="text-red-500">*</span>
+              <label htmlFor="trainerType" className="form-label">
+                Preferred type <span className="text-red-500">*</span>
               </label>
-              <select
-                id="trainerType"
-                name="trainerType"
-                required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              >
+              <select id="trainerType" name="trainerType" required className="input-field">
                 <option value="">Select type</option>
-                <option value="Part-Time">Part-Time</option>
-                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-time</option>
+                <option value="Full-Time">Full-time</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="trainerMessage" className="block text-sm font-medium text-text mb-2">
-                Message
-              </label>
+              <label htmlFor="trainerMessage" className="form-label">Message</label>
               <textarea
                 id="trainerMessage"
                 name="trainerMessage"
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                placeholder="Tell us about your experience and the kind of training you would like to deliver..."
+                className="input-field min-h-[100px] resize-y"
+                placeholder="Tell us about your experience and the training you would like to deliver…"
               />
             </div>
 
             {submitStatus === 'success' && (
-              <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg text-sm">
-                Thank you! Your trainer application has been submitted. Our team will contact you soon.
+              <div className="rounded-card border border-emerald-200 bg-emerald-50 text-emerald-900 px-4 py-3 text-sm">
+                Thank you! Your application is in. Our team will contact you soon.
               </div>
             )}
 
             {submitStatus === 'error' && (
-              <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg text-sm">
-                There was an error submitting your application. Please try again or contact us directly.
+              <div className="rounded-card border border-red-200 bg-red-50 text-red-800 px-4 py-3 text-sm">
+                Something went wrong. Please try again or contact us directly.
               </div>
             )}
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn-cta w-full px-6 py-3 shadow-md disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-lg disabled:active:scale-100"
+              className="btn-cta w-full px-6 py-3.5 justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-md disabled:hover:translate-y-0 disabled:active:scale-100"
             >
-              {isSubmitting ? 'Submitting...' : 'Submit Application'}
+              {isSubmitting ? 'Submitting…' : 'Submit application'}
             </button>
           </form>
         </div>
@@ -286,4 +233,3 @@ export default function TrainerJoinSection() {
     </section>
   )
 }
-

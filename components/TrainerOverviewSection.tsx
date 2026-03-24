@@ -3,77 +3,71 @@ import { CheckCircle2 } from 'lucide-react'
 
 export default function TrainerOverviewSection() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
-            Join BOSS Academy as a Trainer
+    <section className="py-16 md:py-24 bg-surface">
+      <div className="section-container">
+        <div className="max-w-3xl mx-auto text-center mb-14 md:mb-16">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Join BOSS Academy as a trainer
           </h2>
-          <div className="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-lg text-text-light max-w-3xl mx-auto">
-            We are looking for passionate professionals and experts to deliver high-impact training programs.
+          <p className="text-lg text-slate-600 leading-relaxed">
+            We collaborate with professionals who want to teach hands-on, high-impact programs — part-time or full-time.
           </p>
         </div>
 
-        {/* Trainer types */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-background-dark">
-            <h3 className="text-2xl font-bold text-text mb-3">Part-Time Trainers</h3>
-            <p className="text-text-light mb-4">
-              Industry professionals who can deliver sessions on weekends or specific modules as part of our
-              specialized programs.
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14 max-w-5xl mx-auto">
+          <div className="card-elevated p-8 md:p-10 hover:-translate-y-0.5">
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-3">Part-time trainers</h3>
+            <p className="text-slate-600 mb-5 leading-relaxed">
+              Deliver sessions on weekends or specific modules alongside your day job.
             </p>
-            <ul className="space-y-2 text-text-light text-sm">
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-600 mt-0.5" />
-                <span>Flexible scheduling around your professional commitments.</span>
+            <ul className="space-y-3 text-slate-600 text-sm">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
+                <span>Flexible scheduling around your commitments.</span>
               </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-600 mt-0.5" />
-                <span>Opportunities to mentor students and working professionals.</span>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
+                <span>Mentor students and working professionals.</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-background-dark">
-            <h3 className="text-2xl font-bold text-text mb-3">Full-Time Trainers</h3>
-            <p className="text-text-light mb-4">
-              Dedicated trainers who work with BOSS Global Academy of Technology on ongoing training programs
-              and institutional partnerships.
+          <div className="card-elevated p-8 md:p-10 hover:-translate-y-0.5">
+            <h3 className="font-heading text-xl font-bold text-slate-900 mb-3">Full-time trainers</h3>
+            <p className="text-slate-600 mb-5 leading-relaxed">
+              Lead ongoing programs and institutional partnerships with dedicated assignments.
             </p>
-            <ul className="space-y-2 text-text-light text-sm">
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-600 mt-0.5" />
-                <span>Structured training assignments across multiple programs.</span>
+            <ul className="space-y-3 text-slate-600 text-sm">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
+                <span>Structured work across multiple programs.</span>
               </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-600 mt-0.5" />
-                <span>Opportunities to design curriculum and lead new initiatives.</span>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
+                <span>Help shape curriculum and new initiatives.</span>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Areas of expertise */}
-        <div className="mb-12">
-          <h3 className="text-xl font-semibold text-text mb-4 text-center md:text-left">
-            Areas of Expertise
+        <div className="max-w-5xl mx-auto mb-12">
+          <h3 className="font-heading text-lg font-semibold text-slate-900 mb-4 text-center md:text-left">
+            Areas of expertise
           </h3>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5 justify-center md:justify-start">
             {[
-              'Healthcare & Hospital Administration',
-              'Electric Vehicle (EV) Technology',
-              'Artificial Intelligence & Data Science',
+              'Healthcare & hospital administration',
+              'Electric vehicle (EV) technology',
+              'AI & data science',
               'Cybersecurity',
-              'Electronics & Mobile Repair',
-              'Solar & Electrical Systems',
-              'Soft Skills & Communication',
-              'Corporate Training & Leadership',
+              'Electronics & mobile repair',
+              'Solar & electrical systems',
+              'Soft skills & communication',
+              'Corporate training & leadership',
             ].map((area) => (
               <span
                 key={area}
-                className="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-xs font-semibold"
+                className="inline-flex items-center px-4 py-2 rounded-full bg-primary-600/10 text-primary-800 text-xs font-semibold border border-primary-600/15"
               >
                 {area}
               </span>
@@ -81,17 +75,12 @@ export default function TrainerOverviewSection() {
           </div>
         </div>
 
-        {/* CTA */}
         <div className="text-center">
-          <Link
-            href="/trainers"
-            className="btn-cta px-8 py-3 shadow-md"
-          >
-            Apply as Trainer
+          <Link href="/trainers" className="btn-cta px-8 py-3.5 inline-flex justify-center">
+            Apply as trainer
           </Link>
         </div>
       </div>
     </section>
   )
 }
-

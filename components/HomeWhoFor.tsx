@@ -1,45 +1,52 @@
-import { CheckCircle2, XCircle } from 'lucide-react'
+import { GraduationCap, UserSearch, RefreshCw, Sparkles } from 'lucide-react'
 
-const forYou = [
-  'Students who want job-ready skills',
-  'Freshers struggling to get interviews',
-  'Anyone who wants to start earning',
-]
-
-const notForYou = [
-  'People looking only for certificates',
-  'People not willing to practice',
+const audiences = [
+  {
+    title: 'Students & freshers',
+    description: 'Build skills early so interviews and your first role feel less overwhelming.',
+    icon: GraduationCap,
+  },
+  {
+    title: 'Job seekers',
+    description: 'Learn what employers expect — and prove it with practice you can explain clearly.',
+    icon: UserSearch,
+  },
+  {
+    title: 'Career switchers',
+    description: 'Structured training and clear milestones when you’re starting in a new field.',
+    icon: RefreshCw,
+  },
+  {
+    title: 'Beginners',
+    description: 'No background needed. Lessons start from the basics at a steady, supportive pace.',
+    icon: Sparkles,
+  },
 ]
 
 export default function HomeWhoFor() {
   return (
-    <section className="py-16 md:py-20 bg-gray-50 border-y border-gray-100 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.55)]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-text text-center mb-3">Who This Is For</h2>
-        <div className="w-16 h-1 bg-cta-500 mx-auto mb-10" />
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-          <div className="bg-white rounded-xl border border-primary-100 shadow-sm p-6 md:p-8">
-            <h3 className="font-bold text-primary-700 mb-4 text-lg">This is for you if…</h3>
-            <ul className="space-y-3">
-              {forYou.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-text-light">
-                  <CheckCircle2 className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" aria-hidden />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 md:p-8">
-            <h3 className="font-bold text-text mb-4 text-lg">Not for you if…</h3>
-            <ul className="space-y-3">
-              {notForYou.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-text-muted">
-                  <XCircle className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" aria-hidden />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <section id="who-for" className="py-20 md:py-28 bg-white">
+      <div className="section-container">
+        <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">Who is this for?</h2>
+          <p className="text-lg text-slate-600 leading-relaxed">
+            For people who want skills that show up in real work — not another certificate sitting in a drawer.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {audiences.map(({ title, description, icon: Icon }) => (
+            <article
+              key={title}
+              className="rounded-card border border-slate-200/90 bg-white p-7 shadow-sm hover:border-primary-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-card bg-primary-600/10 text-primary-600">
+                <Icon className="w-6 h-6" strokeWidth={2} aria-hidden />
+              </div>
+              <h3 className="font-heading text-lg font-semibold text-slate-900 mb-2">{title}</h3>
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed">{description}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

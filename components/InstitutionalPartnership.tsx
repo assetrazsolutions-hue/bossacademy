@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { WHATSAPP_ADVISOR_URL } from '@/lib/whatsapp'
 import {
   Building2,
   GraduationCap,
@@ -139,9 +141,8 @@ export default function IndustryPartnershipsSection() {
   const [showMore, setShowMore] = useState(false)
 
   return (
-    <section id="industry-partnerships" className="bg-[#f9fafb] py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <section id="industry-partnerships" className="bg-surface py-16 md:py-24">
+      <div className="section-container">
         <motion.div
           className="mx-auto max-w-3xl text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -149,14 +150,14 @@ export default function IndustryPartnershipsSection() {
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-blue-600 sm:text-sm">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary-600 sm:text-sm">
             Flexible training for modern organizations
           </p>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-            Industry Partnerships That Deliver Real Results
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.5rem]">
+            Industry partnerships that deliver real results
           </h2>
-          <p className="mt-4 text-base text-gray-600 sm:text-lg">
-            Customized training solutions tailored to your organization’s needs across industries.
+          <p className="mt-4 text-base text-slate-600 sm:text-lg leading-relaxed">
+            Custom training aligned to your teams — practical delivery, measurable outcomes.
           </p>
         </motion.div>
 
@@ -175,34 +176,29 @@ export default function IndustryPartnershipsSection() {
 
         {/* Micro-conversion strip */}
         <motion.div
-          className="mt-10 rounded-2xl bg-white px-4 py-5 text-center shadow-sm ring-1 ring-gray-200 sm:px-6 md:flex md:items-center md:justify-between md:text-left"
+          className="mt-10 rounded-card bg-white px-5 py-6 text-center shadow-sm border border-slate-200/90 sm:px-8 md:flex md:items-center md:justify-between md:text-left"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
           <div>
-            <p className="text-sm font-semibold text-gray-900 sm:text-base">
-              Not sure where to start?
-            </p>
-            <p className="mt-1 text-xs text-gray-600 sm:text-sm">
+            <p className="text-sm font-semibold text-slate-900 sm:text-base">Not sure where to start?</p>
+            <p className="mt-1 text-xs text-slate-600 sm:text-sm">
               Talk to our team to find the right training solution for your organization.
             </p>
           </div>
-          <div className="mt-4 flex justify-center gap-3 md:mt-0 md:justify-end">
+          <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3 md:mt-0 md:justify-end">
+            <Link href="/contact" className="btn-outline px-5 py-2.5 text-sm justify-center">
+              Contact us
+            </Link>
             <a
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-lg bg-white px-4 py-2 text-xs font-semibold text-gray-800 shadow-sm ring-1 ring-gray-200 transition-colors duration-200 hover:bg-gray-50 sm:text-sm"
-            >
-              📞 Contact Us
-            </a>
-            <a
-              href="https://wa.me/919916800685"
+              href={WHATSAPP_ADVISOR_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 px-4 py-2 text-xs font-semibold text-white shadow-md transition-colors duration-200 hover:from-green-600 hover:to-emerald-600 sm:text-sm"
+              className="btn-cta px-5 py-2.5 text-sm justify-center"
             >
-              💬 WhatsApp
+              WhatsApp
             </a>
           </div>
         </motion.div>
@@ -210,13 +206,13 @@ export default function IndustryPartnershipsSection() {
         {/* Divider + expand button */}
         <div className="mt-10 flex flex-col items-center">
           <div className="h-px w-full max-w-4xl bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
-          <p className="mt-3 text-xs text-gray-500 sm:text-sm">
+          <p className="mt-3 text-xs text-slate-500 sm:text-sm">
             We support multiple industries across sectors and organization sizes.
           </p>
           <button
             type="button"
             onClick={() => setShowMore((prev) => !prev)}
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-colors duration-200 hover:from-blue-700 hover:to-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+            className="mt-6 btn-cta inline-flex items-center gap-2 px-6 py-2.5 text-sm"
           >
             {showMore ? 'Show Less' : 'Explore More Industries'}
             <span className={`transition-transform ${showMore ? 'rotate-180' : ''}`}>{showMore ? '↑' : '↓'}</span>
@@ -250,13 +246,13 @@ export default function IndustryPartnershipsSection() {
 
         {/* Trust strip */}
         <motion.div
-          className="mt-12 rounded-full bg-white/90 px-4 py-3 text-center text-xs font-medium text-gray-600 shadow-sm ring-1 ring-gray-200 sm:text-sm"
+          className="mt-12 rounded-card bg-white px-5 py-4 text-center text-xs font-medium text-slate-600 border border-slate-200/90 shadow-sm sm:text-sm"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          Industry-Focused | Practical Learning | Scalable Training Solutions
+          Industry-focused · Practical learning · Scalable delivery
         </motion.div>
       </div>
     </section>
@@ -268,37 +264,31 @@ function Card({ card }: { card: Card }) {
   return (
     <motion.article
       variants={cardVariants}
-      className="group relative flex h-full flex-col rounded-2xl bg-white p-6 shadow-md ring-1 ring-gray-100 transition-transform transition-shadow duration-300 hover:scale-[1.03] hover:shadow-xl hover:ring-indigo-200"
+      className="group relative flex h-full flex-col rounded-card bg-white p-6 shadow-sm border border-slate-200/90 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary-200/80"
     >
-      {/* gradient border on hover */}
-      <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 group-hover:[background:radial-gradient(circle_at_top,_rgba(59,130,246,0.10),_transparent_55%)] transition-opacity duration-300" />
+      <div className="pointer-events-none absolute inset-0 rounded-card opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.06),_transparent_60%)] transition-opacity duration-300" />
 
       <div className="relative z-10 flex flex-1 flex-col">
-        {/* Icon + label */}
         <div className="mb-4 flex items-center gap-3">
           <motion.div
-            className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 shadow-sm"
-            whileHover={{ scale: 1.08, rotate: 2 }}
+            className="flex h-11 w-11 items-center justify-center rounded-card bg-primary-600/10 text-primary-600"
+            whileHover={{ scale: 1.06 }}
             transition={{ type: 'spring', stiffness: 260, damping: 18 }}
           >
             <Icon className="h-6 w-6" />
           </motion.div>
-          <span className="text-xs font-semibold uppercase tracking-wide text-blue-600">
-            {card.label}
-          </span>
+          <span className="text-xs font-semibold uppercase tracking-wide text-primary-600">{card.label}</span>
         </div>
 
-        <h3 className="text-lg font-semibold text-gray-900 sm:text-xl">{card.title}</h3>
-        <p className="mt-3 text-sm text-gray-600">{card.description}</p>
+        <h3 className="font-heading text-lg font-semibold text-slate-900 sm:text-xl">{card.title}</h3>
+        <p className="mt-3 text-sm text-slate-600 leading-relaxed">{card.description}</p>
 
         <div className="mt-6">
-          <motion.button
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            className="btn-cta w-full px-4 py-2.5 text-sm"
-          >
-            {card.cta}
-          </motion.button>
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <Link href="/register" className="btn-cta block w-full text-center px-4 py-2.5 text-sm">
+              {card.cta}
+            </Link>
+          </motion.div>
         </div>
       </div>
     </motion.article>

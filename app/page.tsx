@@ -1,24 +1,20 @@
 import Hero from '@/components/Hero'
-import HomeWorkshop from '@/components/HomeWorkshop'
+import HomeTrustStrip from '@/components/HomeTrustStrip'
 import HomeWhoFor from '@/components/HomeWhoFor'
 import HomeCoreCourses from '@/components/HomeCoreCourses'
-import HomeAfterJoin from '@/components/HomeAfterJoin'
-import HomeDecisionSupport from '@/components/HomeDecisionSupport'
-import HomeHowItWorks from '@/components/HomeHowItWorks'
 import HomeWhyChooseUs from '@/components/HomeWhyChooseUs'
+import HomeHowItWorks from '@/components/HomeHowItWorks'
 import HomeFinalCTA from '@/components/HomeFinalCTA'
 
 export default function Home() {
   return (
-    <div className="bg-background">
+    <div className="bg-surface">
       <Hero />
-      <HomeWorkshop />
+      <HomeTrustStrip />
       <HomeWhoFor />
       <HomeCoreCourses />
-      <HomeAfterJoin />
-      <HomeDecisionSupport />
-      <HomeHowItWorks />
       <HomeWhyChooseUs />
+      <HomeHowItWorks />
       <HomeFinalCTA />
     </div>
   )

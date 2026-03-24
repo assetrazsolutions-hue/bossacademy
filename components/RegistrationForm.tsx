@@ -30,7 +30,6 @@ export default function RegistrationForm() {
     setSubmitStatus('idle')
 
     try {
-      // Transform camelCase to snake_case for database
       const dbData = {
         full_name: formData.fullName,
         phone_number: formData.phoneNumber,
@@ -46,7 +45,6 @@ export default function RegistrationForm() {
 
       if (error) throw error
 
-      // Fire-and-forget email notification; failures here won't affect the user
       fetch('/api/registration-apply', {
         method: 'POST',
         headers: {
@@ -79,12 +77,12 @@ export default function RegistrationForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-2xl mx-auto space-y-6 bg-white shadow-lg rounded-xl p-6 md:p-8"
+      className="max-w-2xl mx-auto space-y-6 card-elevated p-6 md:p-10 hover:-translate-y-0.5"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="fullName" className="block text-sm font-medium text-text mb-2">
-            Full Name <span className="text-red-500">*</span>
+          <label htmlFor="fullName" className="form-label">
+            Full name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -93,13 +91,13 @@ export default function RegistrationForm() {
             required
             value={formData.fullName}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="input-field"
           />
         </div>
 
         <div>
-          <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-2">
-            Phone Number <span className="text-red-500">*</span>
+          <label htmlFor="phoneNumber" className="form-label">
+            Phone number <span className="text-red-500">*</span>
           </label>
           <input
             type="tel"
@@ -108,12 +106,12 @@ export default function RegistrationForm() {
             required
             value={formData.phoneNumber}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="input-field"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="email" className="form-label">
             Email <span className="text-red-500">*</span>
           </label>
           <input
@@ -123,12 +121,12 @@ export default function RegistrationForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="input-field"
           />
         </div>
 
         <div>
-          <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="city" className="form-label">
             City <span className="text-red-500">*</span>
           </label>
           <input
@@ -138,13 +136,13 @@ export default function RegistrationForm() {
             required
             value={formData.city}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="input-field"
           />
         </div>
 
-        <div>
-          <label htmlFor="educationProfession" className="block text-sm font-medium text-gray-700 mb-2">
-            Education / Profession <span className="text-red-500">*</span>
+        <div className="md:col-span-2">
+          <label htmlFor="educationProfession" className="form-label">
+            Education / profession <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -154,12 +152,12 @@ export default function RegistrationForm() {
             value={formData.educationProfession}
             onChange={handleChange}
             placeholder="e.g., B.Com final year, B.Tech fresher, 12th pass, career break"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="input-field"
           />
         </div>
 
-        <div>
-          <label htmlFor="programInterested" className="block text-sm font-medium text-gray-700 mb-2">
+        <div className="md:col-span-2">
+          <label htmlFor="programInterested" className="form-label">
             Course or workshop <span className="text-red-500">*</span>
           </label>
           <select
@@ -168,7 +166,7 @@ export default function RegistrationForm() {
             required
             value={formData.programInterested}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="input-field"
           >
             <option value="">Select an option</option>
             <option value="Free Workshop">Free Workshop</option>
@@ -181,8 +179,8 @@ export default function RegistrationForm() {
       </div>
 
       <div>
-        <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">
-          College or employer <span className="text-gray-400 font-normal">(optional)</span>
+        <label htmlFor="organization" className="form-label">
+          College or employer <span className="text-slate-400 font-normal">(optional)</span>
         </label>
         <input
           type="text"
@@ -191,78 +189,70 @@ export default function RegistrationForm() {
           value={formData.organization}
           onChange={handleChange}
           placeholder="e.g., college name, or leave blank if not applicable"
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="input-field"
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-          Message
-        </label>
+        <label htmlFor="message" className="form-label">Message</label>
         <textarea
           id="message"
           name="message"
           rows={4}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="input-field min-h-[100px] resize-y"
           placeholder="What do you want to achieve? (e.g., first job, switch to analytics, start freelancing…)"
         />
       </div>
 
       {submitStatus === 'success' && (
-        <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
-            Thank you! We’ve received your details and will contact you soon with next steps.
+        <div className="rounded-card border border-emerald-200 bg-emerald-50 text-emerald-900 px-4 py-3 text-sm">
+          Thank you! We&apos;ve received your details and will contact you soon with next steps.
         </div>
       )}
 
       {submitStatus === 'error' && (
-        <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
-          There was an error submitting your registration. Please try again or contact us directly.
+        <div className="rounded-card border border-red-200 bg-red-50 text-red-800 px-4 py-3 text-sm">
+          Something went wrong. Please try again or contact us directly.
         </div>
       )}
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="btn-cta w-full px-6 py-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-lg disabled:active:scale-100"
+        className="btn-cta w-full px-6 py-3.5 justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-md disabled:hover:translate-y-0 disabled:active:scale-100"
       >
-        {isSubmitting ? 'Submitting...' : 'Reserve My Seat Now'}
+        {isSubmitting ? 'Submitting…' : 'Submit registration'}
       </button>
 
-      <p className="text-center text-sm text-text-light">
-        Our team will guide you step-by-step after registration.
+      <p className="text-center text-sm text-slate-600">
+        Our team will guide you step-by-step after you register.
       </p>
 
-      <p className="text-center text-sm text-text-muted">
+      <p className="text-center text-sm text-slate-500">
         Training for hospitals, schools, or companies?{' '}
-        <a href="/partnerships" className="text-primary-600 font-medium hover:underline">
+        <a href="/partnerships" className="font-medium text-primary-600 hover:text-primary-700 hover:underline">
           Enterprise &amp; partnerships
         </a>
       </p>
 
-      {/* Trust signals */}
-      <div className="mt-6 bg-background-light border border-background-dark rounded-lg px-4 py-4 text-sm text-text-light">
-        <h3 className="text-text font-semibold mb-2 text-sm">
-          Why register with BOSS Academy?
-        </h3>
-        <ul className="space-y-1">
-          <li className="flex items-start gap-2">
-            <span className="text-green-600 mt-0.5">✔</span>
-            <span>Practical training — not theory overload</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-green-600 mt-0.5">✔</span>
-            <span>Real-world style projects</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-green-600 mt-0.5">✔</span>
-            <span>Career- and income-focused paths</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-green-600 mt-0.5">✔</span>
-            <span>Clear step-by-step learning path</span>
-          </li>
+      <div className="rounded-card border border-slate-200 bg-surface/80 px-5 py-5 text-sm text-slate-600">
+        <h3 className="font-heading font-semibold text-slate-900 mb-3 text-sm">Why register with BOSS Academy?</h3>
+        <ul className="space-y-2">
+          {[
+            'Practical training — not theory overload',
+            'Real-world style projects',
+            'Career- and income-focused paths',
+            'Clear step-by-step learning path',
+          ].map((line) => (
+            <li key={line} className="flex items-start gap-2">
+              <span className="text-primary-600 mt-0.5 font-bold" aria-hidden>
+                ·
+              </span>
+              <span>{line}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </form>

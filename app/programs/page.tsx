@@ -51,11 +51,14 @@ const programs = [
 
 export default function Programs() {
   return (
-    <div className="bg-background min-h-screen">
-      <div className="bg-gradient-to-r from-primary-800 to-primary-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Courses for Students & Job Seekers</h1>
-          <p className="text-xl text-primary-100 max-w-3xl mx-auto">
+    <div className="bg-surface min-h-screen">
+      <div className="relative overflow-hidden bg-primary-600 text-white py-16 md:py-20">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_100%_0%,rgba(249,115,22,0.18),transparent)]" />
+        <div className="section-container relative text-center">
+          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">
+            Courses for students & job seekers
+          </h1>
+          <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
             Get job-ready or start earning with practical training in office skills, data analytics, and digital
             marketing — aligned with what you see on our homepage.
           </p>
@@ -68,8 +71,9 @@ export default function Programs() {
             const Icon = program.icon
             return (
               <div
+                id={program.id}
                 key={program.id}
-                className="bg-background-light rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-background-dark flex flex-col h-full"
+                className="bg-white rounded-card shadow-md p-8 hover:shadow-lg transition-all duration-300 border border-slate-200/90 hover:border-primary-200 hover:-translate-y-0.5 flex flex-col h-full scroll-mt-24"
               >
                 <div className="text-gray-400 mb-4">
                   <Icon className="w-14 h-14" aria-hidden />
@@ -100,8 +104,8 @@ export default function Programs() {
                     ))}
                   </ul>
                 </div>
-                <Link href="/register" className="btn-cta mt-auto w-full text-center px-6 py-3">
-                  Start Your Career
+                <Link href="/register" className="btn-cta mt-auto w-full text-center px-6 py-3.5">
+                  Enroll now
                 </Link>
               </div>
             )

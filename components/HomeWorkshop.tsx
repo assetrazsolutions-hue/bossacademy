@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import { CheckCircle2 } from 'lucide-react'
-
-/** Update when the next live workshop is scheduled (shown on homepage). */
-export const NEXT_WORKSHOP_WHEN = 'Saturday, 6 PM'
+import { NEXT_WORKSHOP_WHEN } from '@/lib/workshop-schedule'
 
 const bullets = [
   'How to go from zero skills to job-ready in 60–90 days',
