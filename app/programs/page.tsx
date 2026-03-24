@@ -57,9 +57,10 @@ export default function Programs() {
         eyebrow="Our programs"
         title="Courses for students & job seekers"
         subtitle="Get job-ready or start earning with practical training in office skills, data analytics, and digital marketing, aligned with what you see on our homepage."
+        conversionCtas={{ primaryHref: '#programs' }}
       />
 
-      <div className="section-container py-20 md:py-28">
+      <div id="programs" className="section-container py-20 md:py-28 scroll-mt-24">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
           {programs.map((program) => {
             const Icon = program.icon
