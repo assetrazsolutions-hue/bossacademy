@@ -21,6 +21,8 @@ type Card = {
   label: string
   description: string
   cta: string
+  /** Enterprise: contact. Trainers: /trainers */
+  href: string
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
 }
 
@@ -31,7 +33,8 @@ const primaryCards: Card[] = [
     label: 'Schools & Colleges',
     description:
       'Equip students with industry-ready skills, future technologies, and career-focused training that improves placement outcomes.',
-    cta: 'Partner With Us',
+    cta: 'Discuss partnership',
+    href: '/contact',
     icon: GraduationCap,
   },
   {
@@ -40,7 +43,8 @@ const primaryCards: Card[] = [
     label: 'Hospitals',
     description:
       'Train staff in patient care, hospital administration, billing, and digital systems to reduce errors and improve patient experience.',
-    cta: 'Start Learning Now',
+    cta: 'Discuss partnership',
+    href: '/contact',
     icon: MessageCircle,
   },
   {
@@ -49,7 +53,8 @@ const primaryCards: Card[] = [
     label: 'Corporate Organizations',
     description:
       'Upskill employees in digital tools, leadership, and emerging technologies to boost productivity and business growth.',
-    cta: 'Start Learning Now',
+    cta: 'Discuss partnership',
+    href: '/contact',
     icon: Building2,
   },
   {
@@ -58,7 +63,8 @@ const primaryCards: Card[] = [
     label: 'Industrial & Manufacturing',
     description:
       'Develop skilled technicians in EV, electrical systems, safety, and operations to improve throughput and reduce downtime.',
-    cta: 'Start Learning Now',
+    cta: 'Discuss partnership',
+    href: '/contact',
     icon: Car,
   },
   {
@@ -67,7 +73,8 @@ const primaryCards: Card[] = [
     label: 'Government & Missions',
     description:
       'Collaborate on large-scale skill development, employment programs, and workforce initiatives that deliver measurable impact.',
-    cta: 'Partner With Us',
+    cta: 'Discuss partnership',
+    href: '/contact',
     icon: CheckCircle2,
   },
   {
@@ -77,6 +84,7 @@ const primaryCards: Card[] = [
     description:
       'Join as a trainer or partner to deliver high-impact training programs across industries.',
     cta: 'Apply as trainer',
+    href: '/trainers',
     icon: Users,
   },
 ]
@@ -88,7 +96,8 @@ const moreCards: Card[] = [
     label: 'Startups & Small Businesses',
     description:
       'Support lean teams with practical training that accelerates product delivery, customer acquisition, and market readiness.',
-    cta: 'Start Learning Now',
+    cta: 'Discuss partnership',
+    href: '/contact',
     icon: Lightbulb,
   },
   {
@@ -97,7 +106,8 @@ const moreCards: Card[] = [
     label: 'IT & Tech',
     description:
       'Build strong engineering and operations teams with upskilling in modern stacks, tools, and delivery practices.',
-    cta: 'Start Learning Now',
+    cta: 'Discuss partnership',
+    href: '/contact',
     icon: CircuitBoard,
   },
   {
@@ -106,7 +116,8 @@ const moreCards: Card[] = [
     label: 'EV & Automotive',
     description:
       'Create EV-ready technicians and engineers through hands-on training in EV systems and diagnostics that improves service quality.',
-    cta: 'Start Learning Now',
+    cta: 'Discuss partnership',
+    href: '/contact',
     icon: Car,
   },
   {
@@ -115,7 +126,8 @@ const moreCards: Card[] = [
     label: 'NGOs & Impact Orgs',
     description:
       'Partner on community-focused skilling, employability, and livelihood programs that increase long-term impact.',
-    cta: 'Partner With Us',
+    cta: 'Discuss partnership',
+    href: '/contact',
     icon: CheckCircle2,
   },
 ]
@@ -157,7 +169,8 @@ export default function IndustryPartnershipsSection() {
             Industry partnerships that deliver real results
           </h2>
           <p className="mt-4 text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Custom training aligned to your teams, with practical delivery and measurable outcomes.
+            Custom training aligned to your teams, with practical delivery and measurable outcomes. Tell us your sector
+            and goals — we&apos;ll suggest a format that fits (on-site, cohort, or hybrid).
           </p>
         </motion.div>
 
@@ -283,7 +296,7 @@ function Card({ card }: { card: Card }) {
 
         <div className="mt-6">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-            <Link href="/register" className="btn-cta block w-full text-center px-4 py-2.5 text-sm">
+            <Link href={card.href} className="btn-cta block w-full text-center px-4 py-2.5 text-sm">
               {card.cta}
             </Link>
           </motion.div>

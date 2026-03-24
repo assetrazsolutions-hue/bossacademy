@@ -40,11 +40,7 @@ export default function ProgramDetailCard({ program }: { program: ProgramDetail 
           <span className="font-medium text-slate-700">Limited seats per batch.</span> New batches starting regularly.
         </p>
 
-        <p className="text-slate-600 text-sm md:text-base mb-6 leading-relaxed">{program.summary}</p>
-
-        <div className="mb-8">
-          <CtaPair />
-        </div>
+        <p className="text-slate-600 text-sm md:text-base mb-8 leading-relaxed">{program.summary}</p>
 
         <div className="space-y-6 flex-1">
           <div>
@@ -74,10 +70,6 @@ export default function ProgramDetailCard({ program }: { program: ProgramDetail 
           <div>
             <h3 className="font-heading font-semibold text-slate-900 mb-3 text-sm md:text-base">Real-world application</h3>
             <p className="text-slate-600 text-sm leading-relaxed">{program.realWorldApplication}</p>
-          </div>
-
-          <div className="pt-2">
-            <CtaPair />
           </div>
 
           <div>

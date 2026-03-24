@@ -12,7 +12,12 @@ export default function PartnershipsPage() {
       <PageHero
         eyebrow="Hospitals, schools, government & enterprise"
         title="Enterprise & partnerships"
-        subtitle="Industry-aligned training at scale for organizations that need real outcomes, not generic slides."
+        subtitle="Industry-aligned training at scale for organizations that need real outcomes, not generic slides. We scope cohorts, on-site delivery, and CSR-style programs around your constraints."
+        conversionCtas={{
+          primaryHref: '/contact',
+          primaryLabel: 'Discuss partnership',
+          secondaryLabel: 'Get Free Guidance',
+        }}
       >
         <Link
           href="/"
@@ -23,7 +28,7 @@ export default function PartnershipsPage() {
       </PageHero>
 
       <InstitutionalPartnership />
-      <FeaturedPrograms background="white" />
+      <FeaturedPrograms background="white" enterpriseMode />
       <GovernmentCSRPrograms />
       <TrainerOverviewSection />
 
@@ -37,8 +42,11 @@ export default function PartnershipsPage() {
             Tell us about your organization and we&apos;ll suggest a training approach that fits.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
-            <Link href="/programs" className="btn-cta px-8 py-3.5 text-base md:text-lg justify-center shadow-lg shadow-black/10">
-              Start Learning Now
+            <Link
+              href="/contact"
+              className="btn-cta px-8 py-3.5 text-base md:text-lg justify-center shadow-lg shadow-black/10"
+            >
+              Discuss partnership
             </Link>
             <a
               href={WHATSAPP_ADVISOR_URL}
@@ -50,8 +58,9 @@ export default function PartnershipsPage() {
             </a>
           </div>
           <p className="mt-8 text-sm text-blue-100/95">
-            <Link href="/contact" className="font-medium underline underline-offset-4 decoration-white/40 hover:decoration-white">
-              Organization or partnership inquiry
+            <span className="text-blue-200/90">Individual learner? </span>
+            <Link href="/programs" className="font-semibold text-white underline underline-offset-4 decoration-white/50 hover:decoration-white">
+              Start Learning Now
             </Link>
           </p>
         </div>

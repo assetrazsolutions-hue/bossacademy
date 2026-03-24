@@ -6,16 +6,19 @@ interface Program {
   duration: string
   modules: string[]
   icon: React.ReactNode
-  buttonText: string
   availability: string
   outcome: string
 }
 
-interface FeaturedProgramCardProps {
+function FeaturedProgramCard({
+  program,
+  ctaHref,
+  ctaLabel,
+}: {
   program: Program
-}
-
-function FeaturedProgramCard({ program }: FeaturedProgramCardProps) {
+  ctaHref: string
+  ctaLabel: string
+}) {
   return (
     <article className="group rounded-card border border-slate-200/90 bg-white p-8 flex flex-col h-full shadow-sm hover:shadow-lg hover:border-primary-200/80 hover:-translate-y-1 transition-all duration-300">
       <div className="mb-5 text-primary-600">{program.icon}</div>
@@ -46,8 +49,8 @@ function FeaturedProgramCard({ program }: FeaturedProgramCardProps) {
 
       <p className="text-slate-500 text-sm mb-6 leading-relaxed">{program.outcome}</p>
 
-      <Link href="/register" className="btn-cta w-full text-center px-6 py-3.5 text-base mt-auto">
-        {program.buttonText}
+      <Link href={ctaHref} className="btn-cta w-full text-center px-6 py-3.5 text-base mt-auto">
+        {ctaLabel}
       </Link>
     </article>
   )
@@ -56,10 +59,15 @@ function FeaturedProgramCard({ program }: FeaturedProgramCardProps) {
 type FeaturedProgramsProps = {
   /** Match surrounding sections: `surface` (default) or `white` for stripe alternation on long pages */
   background?: 'surface' | 'white'
+  /** Partnerships page: CTAs go to contact for org / cohort inquiries */
+  enterpriseMode?: boolean
 }
 
-export default function FeaturedPrograms({ background = 'surface' }: FeaturedProgramsProps) {
+export default function FeaturedPrograms({ background = 'surface', enterpriseMode = false }: FeaturedProgramsProps) {
   const bgClass = background === 'white' ? 'bg-white' : 'bg-surface'
+
+  const ctaHref = enterpriseMode ? '/contact' : '/register'
+  const ctaLabel = enterpriseMode ? 'Discuss partnership' : 'Start Learning Now'
 
   const programs: Program[] = [
     {
@@ -72,9 +80,9 @@ export default function FeaturedPrograms({ background = 'surface' }: FeaturedPro
         'Hospital administration',
       ],
       icon: <Stethoscope className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1.5} />,
-      buttonText: 'Start Learning Now',
       availability: 'Limited seats',
-      outcome: 'Ideal for hospital administrators, patient care staff, and healthcare assistants.',
+      outcome:
+        'Ideal for hospital teams and training leads who need structured, practical programs for staff (not generic theory).',
     },
     {
       title: 'Electric Vehicle Technician',
@@ -86,7 +94,6 @@ export default function FeaturedPrograms({ background = 'surface' }: FeaturedPro
         'Safety protocols',
       ],
       icon: <Zap className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1.5} />,
-      buttonText: 'Start Learning Now',
       availability: 'Limited seats',
       outcome: 'Hands-on technical training for EV maintenance careers.',
     },
@@ -100,7 +107,6 @@ export default function FeaturedPrograms({ background = 'surface' }: FeaturedPro
         'AI applications',
       ],
       icon: <Brain className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1.5} />,
-      buttonText: 'Start Learning Now',
       availability: 'Limited seats',
       outcome: 'Perfect for students interested in AI, automation, and emerging technologies.',
     },
@@ -117,13 +123,15 @@ export default function FeaturedPrograms({ background = 'surface' }: FeaturedPro
             Featured industry training programs
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Designed to build practical skills aligned with industry demand.
+            {enterpriseMode
+              ? 'Industry-aligned tracks you can run as cohorts or sponsored programs. Use the button to scope delivery with our team.'
+              : 'Designed to build practical skills aligned with industry demand.'}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {programs.map((program, index) => (
-            <FeaturedProgramCard key={index} program={program} />
+            <FeaturedProgramCard key={index} program={program} ctaHref={ctaHref} ctaLabel={ctaLabel} />
           ))}
         </div>
       </div>

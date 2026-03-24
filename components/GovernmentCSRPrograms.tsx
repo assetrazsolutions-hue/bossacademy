@@ -14,14 +14,14 @@ export default function GovernmentCSRPrograms() {
       title: 'Government skill programs',
       description:
         'Support for national skill initiatives: healthcare training, digital literacy, and youth employability.',
-      buttonText: 'Start Learning Now',
+      buttonText: 'Discuss partnership',
       icon: <Landmark className="w-10 h-10" strokeWidth={1.5} />,
     },
     {
       title: 'CSR skill development',
       description:
         'CSR programs focused on job-ready skills, digital education, and workforce development.',
-      buttonText: 'CSR collaboration',
+      buttonText: 'Discuss partnership',
       icon: <Handshake className="w-10 h-10" strokeWidth={1.5} />,
     },
     {
@@ -42,7 +42,8 @@ export default function GovernmentCSRPrograms() {
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
             We work with government bodies, CSR funds, and NGOs to deliver training that scales, with practical
-            delivery, not slide-only workshops.
+            delivery, not slide-only workshops. Share your mandate and timeline — we&apos;ll respond with a realistic
+            scope.
           </p>
         </div>
 
@@ -57,7 +58,7 @@ export default function GovernmentCSRPrograms() {
               </div>
               <h3 className="font-heading text-xl font-bold text-slate-900 mb-3">{program.title}</h3>
               <p className="text-slate-600 mb-8 flex-1 leading-relaxed">{program.description}</p>
-              <Link href="/register" className="btn-cta px-6 py-3 text-center justify-center">
+              <Link href="/contact" className="btn-cta px-6 py-3 text-center justify-center">
                 {program.buttonText}
               </Link>
             </article>
