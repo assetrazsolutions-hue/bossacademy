@@ -8,9 +8,12 @@ export default function Footer() {
       <div className="section-container py-14 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="sm:col-span-2 lg:col-span-1">
-            <p className="font-heading text-xl font-bold text-white mb-3">BOSS Academy</p>
+            <p className="font-heading text-xl font-bold text-white mb-1">BOSS</p>
+            <p className="text-xs font-medium text-slate-500 mb-3 leading-snug">
+              Global Academy of Technology
+            </p>
             <p className="text-sm leading-relaxed max-w-xs">
-              Practical training for careers in the office, in data, and online — built for beginners who want real
+              Practical training for careers in the office, in data, and online, built for beginners who want real
               skills.
             </p>
           </div>

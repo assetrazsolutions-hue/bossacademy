@@ -141,7 +141,7 @@ export default function IndustryPartnershipsSection() {
   const [showMore, setShowMore] = useState(false)
 
   return (
-    <section id="industry-partnerships" className="bg-surface py-16 md:py-24">
+    <section id="industry-partnerships" className="bg-surface py-20 md:py-28">
       <div className="section-container">
         <motion.div
           className="mx-auto max-w-3xl text-center"
@@ -153,11 +153,11 @@ export default function IndustryPartnershipsSection() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary-600 sm:text-sm">
             Flexible training for modern organizations
           </p>
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.5rem]">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
             Industry partnerships that deliver real results
           </h2>
-          <p className="mt-4 text-base text-slate-600 sm:text-lg leading-relaxed">
-            Custom training aligned to your teams — practical delivery, measurable outcomes.
+          <p className="mt-4 text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            Custom training aligned to your teams, with practical delivery and measurable outcomes.
           </p>
         </motion.div>
 
@@ -203,10 +203,8 @@ export default function IndustryPartnershipsSection() {
           </div>
         </motion.div>
 
-        {/* Divider + expand button */}
         <div className="mt-10 flex flex-col items-center">
-          <div className="h-px w-full max-w-4xl bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
-          <p className="mt-3 text-xs text-slate-500 sm:text-sm">
+          <p className="text-xs text-slate-500 sm:text-sm">
             We support multiple industries across sectors and organization sizes.
           </p>
           <button

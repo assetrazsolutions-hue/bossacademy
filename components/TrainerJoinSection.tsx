@@ -51,7 +51,7 @@ export default function TrainerJoinSection() {
   }
 
   return (
-    <section className="py-14 md:py-20 bg-surface">
+    <section className="py-20 md:py-28 bg-surface">
       <div className="section-container space-y-14 md:space-y-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="card-elevated p-8 md:p-10 hover:-translate-y-0.5">
@@ -124,10 +124,10 @@ export default function TrainerJoinSection() {
           id="trainer-application"
           className="card-elevated max-w-3xl mx-auto p-8 md:p-10 scroll-mt-24 hover:-translate-y-0.5"
         >
-          <h2 className="font-heading text-2xl font-bold text-slate-900 mb-2 text-center md:text-left">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-slate-900 mb-2 text-center md:text-left">
             Trainer application
           </h2>
-          <p className="text-sm text-slate-600 mb-8 text-center md:text-left leading-relaxed">
+          <p className="text-sm md:text-base text-slate-600 mb-8 text-center md:text-left leading-relaxed">
             Share your details and we&apos;ll reach out about opportunities at BOSS Academy.
           </p>
 

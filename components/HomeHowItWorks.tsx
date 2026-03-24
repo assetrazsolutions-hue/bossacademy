@@ -3,7 +3,7 @@ import { ListChecks, BookOpen, Hammer, TrendingUp } from 'lucide-react'
 const steps = [
   {
     title: 'Choose course',
-    text: 'Pick the track that matches your goal — office work, data, or online income.',
+    text: 'Pick the track that matches your goal: office work, data, or online income.',
     icon: ListChecks,
     accent: 'primary' as const,
   },
@@ -29,7 +29,7 @@ const steps = [
 
 export default function HomeHowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 md:py-28 bg-surface border-t border-slate-200/60">
+    <section id="how-it-works" className="py-20 md:py-28 bg-surface">
       <div className="section-container">
         <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">How it works</h2>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Phone, Mail, MessageCircle } from 'lucide-react'
 import { WHATSAPP_ADVISOR_URL } from '@/lib/whatsapp'
+import PageHero from '@/components/PageHero'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -28,21 +29,16 @@ export default function Contact() {
 
   return (
     <div className="bg-surface min-h-screen">
-      <div className="relative overflow-hidden bg-primary-600 text-white py-14 md:py-20">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_100%_0%,rgba(249,115,22,0.18),transparent)]" />
-        <div className="section-container relative text-center">
-          <p className="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-3">We&apos;re here to help</p>
-          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Contact us</h1>
-          <p className="text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
-            Questions about programs, partnerships, or enrollment — send a message or reach us directly.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        eyebrow="We're here to help"
+        title="Contact us"
+        subtitle="Questions about programs, partnerships, or enrollment. Send a message or reach us directly."
+      />
 
-      <div className="section-container py-14 md:py-20">
+      <div className="section-container py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           <div className="card-elevated p-8 md:p-10 hover:-translate-y-0.5">
-            <h2 className="font-heading text-2xl font-bold text-slate-900 mb-8">Get in touch</h2>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-slate-900 mb-8">Get in touch</h2>
 
             <div className="space-y-8">
               <div className="flex items-start gap-4">
@@ -50,8 +46,11 @@ export default function Contact() {
                   <Phone className="w-5 h-5" strokeWidth={2} aria-hidden />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 mb-1">Phone</h3>
-                  <a href="tel:9916800685" className="text-primary-600 hover:text-primary-700 font-medium text-lg transition-colors">
+                  <h3 className="font-heading font-semibold text-slate-900 mb-1">Phone</h3>
+                  <a
+                    href="tel:9916800685"
+                    className="text-primary-600 hover:text-primary-700 font-medium text-lg transition-colors"
+                  >
                     9916 800 685
                   </a>
                 </div>
@@ -62,7 +61,7 @@ export default function Contact() {
                   <MessageCircle className="w-5 h-5" strokeWidth={2} aria-hidden />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 mb-3">WhatsApp</h3>
+                  <h3 className="font-heading font-semibold text-slate-900 mb-3">WhatsApp</h3>
                   <a
                     href={WHATSAPP_ADVISOR_URL}
                     target="_blank"
@@ -79,7 +78,7 @@ export default function Contact() {
                   <Mail className="w-5 h-5" strokeWidth={2} aria-hidden />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
+                  <h3 className="font-heading font-semibold text-slate-900 mb-1">Email</h3>
                   <a
                     href="mailto:info@bossacademy.org"
                     className="text-primary-600 hover:text-primary-700 transition-colors break-all"
@@ -90,7 +89,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <p className="mt-10 pt-8 border-t border-slate-100 text-sm text-slate-600">
+            <p className="mt-10 pt-8 text-sm text-slate-600">
               Prefer the student site?{' '}
               <Link href="/programs" className="font-medium text-primary-600 hover:underline">
                 View programs
@@ -99,7 +98,7 @@ export default function Contact() {
           </div>
 
           <div className="card-elevated p-8 md:p-10 hover:-translate-y-0.5">
-            <h2 className="font-heading text-2xl font-bold text-slate-900 mb-8">Send a message</h2>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-slate-900 mb-8">Send a message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="form-label">
@@ -132,7 +131,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="phone" className="form-label">Phone</label>
+                <label htmlFor="phone" className="form-label">
+                  Phone
+                </label>
                 <input
                   type="tel"
                   id="phone"

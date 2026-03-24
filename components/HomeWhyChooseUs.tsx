@@ -5,7 +5,7 @@ import { siteImages } from '@/lib/site-images'
 const differentiators = [
   {
     title: 'Practical learning',
-    text: 'Short explanations, then you practice — the same rhythm as real work.',
+    text: 'Short explanations, then you practice, the same rhythm as real work.',
     icon: Wrench,
   },
   {
@@ -20,7 +20,7 @@ const differentiators = [
   },
   {
     title: 'Career support',
-    text: 'Guidance on skills, projects, and next steps — not just “finish the module.”',
+    text: 'Guidance on skills, projects, and next steps, not just “finish the module.”',
     icon: HeadphonesIcon,
   },
   {
@@ -43,10 +43,9 @@ export default function HomeWhyChooseUs() {
               Why BOSS Academy
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed max-w-md">
-              We’re built like a modern career platform: clear paths, hands-on work, and support when you need it — not
+              We’re built like a modern career platform: clear paths, hands-on work, and support when you need it, not
               endless theory.
             </p>
-            <div className="hidden lg:block h-px w-24 bg-gradient-to-r from-primary-600 to-accent-500 rounded-full mt-8" />
           </div>
 
           <div className="w-full max-w-xl mx-auto lg:max-w-none lg:ml-auto lg:mr-0">

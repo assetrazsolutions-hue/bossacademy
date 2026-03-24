@@ -173,7 +173,7 @@ export default function RegistrationForm() {
             <option value="AI-Powered Office Professional">AI-Powered Office Professional</option>
             <option value="Data Analytics & Business Intelligence">Data Analytics & Business Intelligence</option>
             <option value="Digital Marketing & Freelancing">Digital Marketing & Freelancing</option>
-            <option value="Not sure — help me choose">Not sure — help me choose</option>
+            <option value="Not sure, help me choose">Not sure, help me choose</option>
           </select>
         </div>
       </div>
@@ -241,7 +241,7 @@ export default function RegistrationForm() {
         <h3 className="font-heading font-semibold text-slate-900 mb-3 text-sm">Why register with BOSS Academy?</h3>
         <ul className="space-y-2">
           {[
-            'Practical training — not theory overload',
+            'Practical training, not theory overload',
             'Real-world style projects',
             'Career- and income-focused paths',
             'Clear step-by-step learning path',

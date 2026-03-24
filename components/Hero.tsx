@@ -20,7 +20,7 @@ export default function Hero() {
               Build real skills. Start your career with confidence.
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10">
-              Practical, hands-on programs for students, job seekers, and beginners — no prior experience required.
+              Practical, hands-on programs for students, job seekers, and beginners. No prior experience required.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-stretch sm:items-center">

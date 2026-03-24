@@ -9,7 +9,7 @@ const courses = [
     headline: 'Walk into any workplace ready to contribute from week one.',
     title: 'AI-Powered Office Professional',
     bullets: [
-      'Documents, spreadsheets, and professional email — the daily toolkit',
+      'Documents, spreadsheets, and professional email: the daily toolkit',
       'Templates and workflows you can reuse on the job',
       'Clear communication for teams and managers',
     ],
@@ -53,12 +53,12 @@ const courses = [
 
 export default function HomeCoreCourses() {
   return (
-    <section id="courses" className="py-20 md:py-28 bg-surface border-y border-slate-200/60">
+    <section id="courses" className="py-20 md:py-28 bg-surface">
       <div className="section-container">
         <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">Core programs</h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Tracks built around skills you use on the job — short bursts of learning, then practice.
+            Tracks built around skills you use on the job: short bursts of learning, then practice.
           </p>
         </div>
 

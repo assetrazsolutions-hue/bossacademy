@@ -16,7 +16,7 @@ const config: Config = {
         card: '12px',
       },
       colors: {
-        /** Brand blue — primary */
+        /** Brand blue (primary) */
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -30,7 +30,7 @@ const config: Config = {
           900: '#1e3a8a',
           950: '#172554',
         },
-        /** Orange accent — CTAs */
+        /** Orange accent (CTAs) */
         accent: {
           50: '#fff7ed',
           100: '#ffedd5',

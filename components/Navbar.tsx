@@ -10,15 +10,19 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm shadow-slate-900/[0.06]">
       <div className="section-container">
-        <div className="flex justify-between items-center h-16 md:h-[4.25rem]">
-          <Link href="/" className="flex-shrink-0 flex items-center gap-2 group">
-            <span className="font-heading text-2xl md:text-[1.65rem] font-bold text-primary-600 tracking-tight group-hover:text-primary-700 transition-colors">
+        <div className="flex justify-between items-center min-h-[4rem] md:min-h-[4.5rem] py-2 md:py-2.5">
+          <Link
+            href="/"
+            className="flex-shrink-0 flex flex-col gap-1 group py-1"
+            aria-label="BOSS Global Academy of Technology, home"
+          >
+            <span className="font-heading text-[1.875rem] sm:text-[2.125rem] md:text-[2.5rem] font-extrabold text-primary-600 tracking-[-0.035em] leading-[0.95] group-hover:text-primary-700 transition-colors">
               BOSS
             </span>
-            <span className="hidden sm:block text-[0.65rem] font-medium uppercase tracking-wider text-slate-500 max-w-[8rem] leading-tight">
-              Global Academy
+            <span className="text-[0.6875rem] sm:text-xs md:text-sm font-medium text-slate-500 leading-snug tracking-wide max-w-[17rem]">
+              Global Academy of Technology
             </span>
           </Link>
 

@@ -1,14 +1,15 @@
 import Link from 'next/link'
-import { Laptop, BarChart3, Megaphone } from 'lucide-react'
+import { Laptop, BarChart3, Megaphone, CheckCircle2 } from 'lucide-react'
+import PageHero from '@/components/PageHero'
 
 const programs = [
   {
     id: 'office',
     title: 'AI-Powered Office Professional',
-    outcome: 'Start your first job with confidence — Excel, emails, reports from Day 1',
+    outcome: 'Start your first job with confidence: Excel, emails, reports from Day 1',
     duration: '2–3 weeks',
     description:
-      'Build practical skills in documents, spreadsheets, email, and everyday workplace tools — with AI-assisted workflows so you can hit the ground running in any office role.',
+      'Build practical skills in documents, spreadsheets, email, and everyday workplace tools, with AI-assisted workflows so you can hit the ground running in any office role.',
     icon: Laptop,
     features: [
       'Real tasks, not slide decks',
@@ -20,10 +21,10 @@ const programs = [
   {
     id: 'data',
     title: 'Data Analytics & Business Intelligence',
-    outcome: 'Become the candidate companies shortlist — dashboards and job-ready projects',
+    outcome: 'Become the candidate companies shortlist: dashboards and job-ready projects',
     duration: '60–90 days',
     description:
-      'Learn to analyze data, build reports, and communicate insights employers actually need — from spreadsheets to dashboards and business questions.',
+      'Learn to analyze data, build reports, and communicate insights employers actually need, from spreadsheets to dashboards and business questions.',
     icon: BarChart3,
     features: [
       'Data cleaning & analysis mindset',
@@ -38,7 +39,7 @@ const programs = [
     outcome: 'Start earning your first income online with practical marketing skills',
     duration: 'Flexible pace',
     description:
-      'Get hands-on with digital channels, campaigns, and client-ready deliverables — whether you want a job in marketing or to offer services independently.',
+      'Get hands-on with digital channels, campaigns, and client-ready deliverables, whether you want a job in marketing or to offer services independently.',
     icon: Megaphone,
     features: [
       'Campaign & channel fundamentals',
@@ -52,21 +53,14 @@ const programs = [
 export default function Programs() {
   return (
     <div className="bg-surface min-h-screen">
-      <div className="relative overflow-hidden bg-primary-600 text-white py-16 md:py-20">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_100%_0%,rgba(249,115,22,0.18),transparent)]" />
-        <div className="section-container relative text-center">
-          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">
-            Courses for students & job seekers
-          </h1>
-          <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-            Get job-ready or start earning with practical training in office skills, data analytics, and digital
-            marketing — aligned with what you see on our homepage.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        eyebrow="Our programs"
+        title="Courses for students & job seekers"
+        subtitle="Get job-ready or start earning with practical training in office skills, data analytics, and digital marketing, aligned with what you see on our homepage."
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="section-container py-20 md:py-28">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
           {programs.map((program) => {
             const Icon = program.icon
             return (
@@ -75,36 +69,27 @@ export default function Programs() {
                 key={program.id}
                 className="bg-white rounded-card shadow-md p-8 hover:shadow-lg transition-all duration-300 border border-slate-200/90 hover:border-primary-200 hover:-translate-y-0.5 flex flex-col h-full scroll-mt-24"
               >
-                <div className="text-gray-400 mb-4">
-                  <Icon className="w-14 h-14" aria-hidden />
+                <div className="text-slate-400 mb-4">
+                  <Icon className="w-12 h-12 md:w-14 md:h-14" aria-hidden />
                 </div>
-                <h2 className="text-2xl font-bold text-text mb-2">{program.title}</h2>
-                <p className="text-primary-700 font-semibold mb-1">{program.outcome}</p>
-                <p className="text-sm text-text-muted mb-4">Duration: {program.duration}</p>
-                <p className="text-text-light mb-6 flex-1">{program.description}</p>
+                <h2 className="font-heading text-xl md:text-2xl font-bold text-slate-900 mb-2">{program.title}</h2>
+                <p className="text-primary-700 font-semibold text-sm md:text-base mb-1">{program.outcome}</p>
+                <p className="text-sm text-slate-500 mb-4">Duration: {program.duration}</p>
+                <p className="text-slate-600 text-sm md:text-base mb-6 flex-1 leading-relaxed">{program.description}</p>
                 <div className="mb-6">
-                  <h3 className="font-semibold text-text mb-3">You&apos;ll work on:</h3>
+                  <h3 className="font-heading font-semibold text-slate-900 mb-3 text-sm md:text-base">
+                    You&apos;ll work on:
+                  </h3>
                   <ul className="space-y-2">
                     {program.features.map((feature) => (
-                      <li key={feature} className="flex items-start text-text-light text-sm">
-                        <svg
-                          className="w-5 h-5 text-gray-400 mr-2 flex-shrink-0 mt-0.5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          aria-hidden
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                        {feature}
+                      <li key={feature} className="flex items-start gap-2 text-slate-600 text-sm">
+                        <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <Link href="/register" className="btn-cta mt-auto w-full text-center px-6 py-3.5">
+                <Link href="/register" className="btn-cta mt-auto w-full text-center px-6 py-3.5 text-base">
                   Enroll now
                 </Link>
               </div>
@@ -112,15 +97,17 @@ export default function Programs() {
           })}
         </div>
 
-        <div className="mt-16 max-w-3xl mx-auto text-center rounded-xl bg-gray-50 border border-gray-200 p-8">
-          <h2 className="text-lg font-bold text-text mb-2">Hospitals, schools, or companies?</h2>
-          <p className="text-text-light text-sm mb-4">
-            Custom training for organizations lives on our Partnerships page — not here. This page is for
-            individual learners (students, freshers, career switchers).
+        <div className="mt-16 md:mt-20 max-w-3xl mx-auto text-center rounded-card bg-white border border-slate-200/90 shadow-sm p-8 md:p-10">
+          <h2 className="font-heading text-lg md:text-xl font-bold text-slate-900 mb-2">
+            Hospitals, schools, or companies?
+          </h2>
+          <p className="text-slate-600 text-sm md:text-base mb-4 leading-relaxed">
+            Custom training for organizations lives on our Partnerships page, not here. This page is for individual
+            learners (students, freshers, career switchers).
           </p>
           <Link
             href="/partnerships"
-            className="inline-block text-primary-600 font-semibold hover:text-primary-700 transition"
+            className="inline-block font-semibold text-primary-600 hover:text-primary-700 transition-colors"
           >
             Enterprise &amp; partnerships →
           </Link>

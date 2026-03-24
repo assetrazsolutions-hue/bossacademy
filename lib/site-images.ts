@@ -1,10 +1,10 @@
 /**
- * Curated Unsplash photography — bright, modern workspaces (swap URLs anytime).
+ * Curated Unsplash photography: bright, modern workspaces (swap URLs anytime).
  * https://unsplash.com/license
  */
 export const siteImages = {
   /**
-   * Hero: group learning (no single stock portrait). Unsplash License — free for commercial use.
+   * Hero: group learning (no single stock portrait). Unsplash License: free for commercial use.
    * @see https://unsplash.com/license
    */
   hero: {
@@ -26,7 +26,7 @@ export const siteImages = {
     },
   },
   whyMentor: {
-    /** Verified 200 OK — previous photo ID returned 404 from Unsplash */
+    /** Verified 200 OK; previous photo ID returned 404 from Unsplash */
     src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=85&auto=format&fit=crop',
     alt: 'Team learning together with a mentor in a modern workspace',
   },

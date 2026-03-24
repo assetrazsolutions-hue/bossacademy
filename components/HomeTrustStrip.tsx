@@ -9,7 +9,7 @@ const items = [
 
 export default function HomeTrustStrip() {
   return (
-    <section className="border-y border-slate-200/80 bg-white py-8 md:py-10">
+    <section className="bg-white py-8 md:py-10">
       <div className="section-container">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {items.map(({ icon: Icon, label }) => (

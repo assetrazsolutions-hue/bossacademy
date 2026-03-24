@@ -13,7 +13,7 @@ export default function GovernmentCSRPrograms() {
     {
       title: 'Government skill programs',
       description:
-        'Support for national skill initiatives — healthcare training, digital literacy, and youth employability.',
+        'Support for national skill initiatives: healthcare training, digital literacy, and youth employability.',
       buttonText: 'Partner with us',
       icon: <Landmark className="w-10 h-10" strokeWidth={1.5} />,
     },
@@ -34,14 +34,14 @@ export default function GovernmentCSRPrograms() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-white border-y border-slate-200/60">
+    <section className="py-20 md:py-28 bg-white border-t border-slate-100">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-14 md:mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Government &amp; CSR programs
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            We work with government bodies, CSR funds, and NGOs to deliver training that scales — with practical
+            We work with government bodies, CSR funds, and NGOs to deliver training that scales, with practical
             delivery, not slide-only workshops.
           </p>
         </div>

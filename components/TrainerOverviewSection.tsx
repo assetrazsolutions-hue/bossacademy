@@ -3,14 +3,14 @@ import { CheckCircle2 } from 'lucide-react'
 
 export default function TrainerOverviewSection() {
   return (
-    <section className="py-16 md:py-24 bg-surface">
+    <section className="py-20 md:py-28 bg-surface">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-14 md:mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Join BOSS Academy as a trainer
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            We collaborate with professionals who want to teach hands-on, high-impact programs — part-time or full-time.
+            We collaborate with professionals who want to teach hands-on, high-impact programs, part-time or full-time.
           </p>
         </div>
 

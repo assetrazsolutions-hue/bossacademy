@@ -32,8 +32,8 @@ function Step({ stepNumber, title, description, icon, isLast = false }: StepProp
 
       {/* Step Content */}
       <div className="text-center">
-        <h3 className="text-xl font-bold text-text mb-2">{title}</h3>
-        <p className="text-text-light text-sm leading-relaxed">{description}</p>
+        <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
+        <p className="text-slate-600 text-sm leading-relaxed">{description}</p>
       </div>
     </div>
   )
@@ -72,11 +72,10 @@ export default function CareerPathway() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Your Career Transformation Journey
           </h2>
-          <div className="w-24 h-1 bg-cta-500 mx-auto mb-6"></div>
-          <p className="text-lg text-text-light max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             A structured pathway designed to transform learners into industry-ready professionals.
           </p>
         </div>
@@ -116,8 +115,8 @@ export default function CareerPathway() {
                   <div className="inline-block bg-primary-700 text-white text-xs font-bold px-2 py-1 rounded-full mb-2">
                     Step {step.stepNumber}
                   </div>
-                  <h3 className="text-xl font-bold text-text mb-2">{step.title}</h3>
-                  <p className="text-text-light text-sm leading-relaxed">{step.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}

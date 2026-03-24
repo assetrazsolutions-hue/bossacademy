@@ -20,12 +20,13 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'BOSS Global Academy of Technology',
-  description: 'Practical career training — office skills, data analytics, and digital marketing for real outcomes.',
+  description:
+    'Practical career training: office skills, data analytics, and digital marketing for real outcomes.',
   metadataBase: new URL('https://www.bossacademy.org'),
   openGraph: {
     title: 'BOSS Global Academy of Technology',
     description:
-      'Practical career training — office skills, data analytics, and digital marketing for real outcomes.',
+      'Practical career training: office skills, data analytics, and digital marketing for real outcomes.',
     url: 'https://www.bossacademy.org',
   },
 }

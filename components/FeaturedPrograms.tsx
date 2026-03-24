@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Stethoscope, Zap, Brain } from 'lucide-react'
+import { Stethoscope, Zap, Brain, CheckCircle2, Clock } from 'lucide-react'
 
 interface Program {
   title: string
@@ -17,58 +17,50 @@ interface FeaturedProgramCardProps {
 
 function FeaturedProgramCard({ program }: FeaturedProgramCardProps) {
   return (
-    <div className="bg-background-light rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-background-dark hover:border-primary-300 h-full flex flex-col">
-      {/* Icon */}
-      <div className="mb-6 text-primary-600">
-        {program.icon}
-      </div>
+    <article className="group rounded-card border border-slate-200/90 bg-white p-8 flex flex-col h-full shadow-sm hover:shadow-lg hover:border-primary-200/80 hover:-translate-y-1 transition-all duration-300">
+      <div className="mb-5 text-primary-600">{program.icon}</div>
 
-      {/* Title */}
-      <h3 className="text-2xl font-bold text-text mb-4">{program.title}</h3>
+      <h3 className="font-heading text-xl md:text-2xl font-bold text-slate-900 mb-4">{program.title}</h3>
 
-      {/* Badges */}
       <div className="flex flex-wrap gap-2 mb-6">
-        <div className="inline-flex items-center gap-1 bg-primary-100 text-primary-700 text-sm font-semibold px-4 py-1 rounded-full">
-          <span aria-hidden="true">⏱</span>
+        <div className="inline-flex items-center gap-1.5 bg-primary-600/10 text-primary-800 text-xs font-semibold px-3 py-1.5 rounded-full border border-primary-600/15">
+          <Clock className="w-3.5 h-3.5 shrink-0" aria-hidden />
           <span>{program.duration}</span>
         </div>
-        <div className="inline-block bg-orange-50 text-orange-700 text-sm font-semibold px-4 py-1 rounded-full">
+        <div className="inline-flex items-center bg-accent-500/10 text-accent-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-accent-500/20">
           {program.availability}
         </div>
       </div>
 
-      {/* Modules List */}
       <div className="flex-1 mb-4">
-        <h4 className="font-semibold text-text mb-4">Modules:</h4>
-        <ul className="space-y-3">
+        <h4 className="font-heading font-semibold text-slate-900 mb-3 text-sm md:text-base">Modules</h4>
+        <ul className="space-y-2.5">
           {program.modules.map((module, index) => (
-            <li key={index} className="flex items-start text-text-light">
-              <svg className="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
+            <li key={index} className="flex items-start gap-2 text-slate-600 text-sm">
+              <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" aria-hidden />
               <span>{module}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      {/* Outcome text */}
-      <p className="text-text-muted text-sm mb-6">
-        {program.outcome}
-      </p>
+      <p className="text-slate-500 text-sm mb-6 leading-relaxed">{program.outcome}</p>
 
-      {/* Register Button */}
-      <Link
-        href="/register"
-        className="btn-cta block w-full text-center px-6 py-3 mt-auto"
-      >
+      <Link href="/register" className="btn-cta w-full text-center px-6 py-3.5 text-base mt-auto">
         {program.buttonText}
       </Link>
-    </div>
+    </article>
   )
 }
 
-export default function FeaturedPrograms() {
+type FeaturedProgramsProps = {
+  /** Match surrounding sections: `surface` (default) or `white` for stripe alternation on long pages */
+  background?: 'surface' | 'white'
+}
+
+export default function FeaturedPrograms({ background = 'surface' }: FeaturedProgramsProps) {
+  const bgClass = background === 'white' ? 'bg-white' : 'bg-surface'
+
   const programs: Program[] = [
     {
       title: 'Hospital Staff Training',
@@ -79,9 +71,9 @@ export default function FeaturedPrograms() {
         'Insurance handling',
         'Hospital administration',
       ],
-      icon: <Stethoscope className="w-16 h-16" />,
+      icon: <Stethoscope className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1.5} />,
       buttonText: 'Register',
-      availability: 'Limited Seats Available',
+      availability: 'Limited seats',
       outcome: 'Ideal for hospital administrators, patient care staff, and healthcare assistants.',
     },
     {
@@ -93,9 +85,9 @@ export default function FeaturedPrograms() {
         'Charging infrastructure',
         'Safety protocols',
       ],
-      icon: <Zap className="w-16 h-16" />,
+      icon: <Zap className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1.5} />,
       buttonText: 'Register',
-      availability: 'Limited Seats Available',
+      availability: 'Limited seats',
       outcome: 'Hands-on technical training for EV maintenance careers.',
     },
     {
@@ -107,32 +99,29 @@ export default function FeaturedPrograms() {
         'Automation tools',
         'AI applications',
       ],
-      icon: <Brain className="w-16 h-16" />,
+      icon: <Brain className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1.5} />,
       buttonText: 'Register',
-      availability: 'Limited Seats Available',
+      availability: 'Limited seats',
       outcome: 'Perfect for students interested in AI, automation, and emerging technologies.',
     },
   ]
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-wide text-text-muted mb-2">
-            Explore Our Core Training Programs
+    <section className={`py-20 md:py-28 ${bgClass}`}>
+      <div className="section-container">
+        <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
+          <p className="text-sm font-semibold text-primary-600 uppercase tracking-wide mb-3">
+            Explore our core training programs
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-text mb-3">
-            Featured Industry Training Programs
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Featured industry training programs
           </h2>
-          <div className="w-24 h-1 bg-primary-600 mx-auto mb-4"></div>
-          <p className="text-base md:text-lg text-text-light max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 leading-relaxed">
             Designed to build practical skills aligned with industry demand.
           </p>
         </div>
 
-        {/* Programs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {programs.map((program, index) => (
             <FeaturedProgramCard key={index} program={program} />
           ))}

@@ -8,7 +8,7 @@ const audiences = [
   },
   {
     title: 'Job seekers',
-    description: 'Learn what employers expect — and prove it with practice you can explain clearly.',
+    description: 'Learn what employers expect, and prove it with practice you can explain clearly.',
     icon: UserSearch,
   },
   {
@@ -30,7 +30,7 @@ export default function HomeWhoFor() {
         <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">Who is this for?</h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            For people who want skills that show up in real work — not another certificate sitting in a drawer.
+            For people who want skills that show up in real work, not another certificate sitting in a drawer.
           </p>
         </div>
 
