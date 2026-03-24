@@ -15,7 +15,7 @@ const courses = [
     ],
     duration: '2–3 weeks',
     icon: Laptop,
-    cta: 'Get office ready',
+    cta: 'Start Learning Now',
     ctaHref: '/programs#office',
     imageKey: 'office' as const,
   },
@@ -45,7 +45,7 @@ const courses = [
     ],
     duration: 'Flexible pace',
     icon: Megaphone,
-    cta: 'Start earning online',
+    cta: 'Start Learning Now',
     ctaHref: '/programs#marketing',
     imageKey: 'marketing' as const,
   },
@@ -57,8 +57,11 @@ export default function HomeCoreCourses() {
       <div className="section-container">
         <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">Core programs</h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-lg text-slate-600 leading-relaxed mb-3">
             Tracks built around skills you use on the job: short bursts of learning, then practice.
+          </p>
+          <p className="text-sm text-slate-500">
+            Limited seats per batch · Next batch starting soon
           </p>
         </div>
 
@@ -91,7 +94,8 @@ export default function HomeCoreCourses() {
                 <div className="p-8 flex flex-col flex-1 pt-7">
                   <p className="text-primary-700 font-semibold text-base leading-snug mb-2">{course.headline}</p>
                   <h3 className="font-heading text-lg font-bold text-slate-900 mb-1">{course.title}</h3>
-                  <p className="text-sm text-slate-500 mb-6">Duration: {course.duration}</p>
+                  <p className="text-sm text-slate-500 mb-1">Duration: {course.duration}</p>
+                  <p className="text-xs text-slate-500 mb-6">Limited seats per batch · Next batch starting soon</p>
                   <ul className="mb-8 space-y-3 text-sm text-slate-600 flex-1">
                     {course.bullets.map((line) => (
                       <li key={line} className="flex gap-3 leading-relaxed">

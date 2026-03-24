@@ -68,7 +68,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="btn-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm"
                   >
-                    Chat on WhatsApp
+                    Get Free Guidance
                   </a>
                 </div>
               </div>

@@ -16,7 +16,7 @@ export default function HomeNotSureSection() {
           rel="noopener noreferrer"
           className="btn-outline px-8 py-3.5 text-base font-semibold inline-flex justify-center"
         >
-          Get Free Career Guidance
+          Get Free Guidance
         </a>
       </div>
     </section>

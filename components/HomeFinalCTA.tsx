@@ -11,18 +11,26 @@ export default function HomeFinalCTA() {
         <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.5rem] font-bold mb-10 leading-tight text-balance">
           Start Your Learning Journey Today
         </h2>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
-          <Link href="/programs" className="btn-cta px-8 py-4 text-base md:text-lg justify-center shadow-lg shadow-black/10">
-            Start Learning Now
-          </Link>
-          <a
-            href={WHATSAPP_ADVISOR_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline px-8 py-4 text-base md:text-lg justify-center"
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center w-full max-w-xl">
+            <Link href="/programs" className="btn-cta px-8 py-4 text-base md:text-lg justify-center shadow-lg shadow-black/10">
+              Start Learning Now
+            </Link>
+            <a
+              href={WHATSAPP_ADVISOR_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline px-8 py-4 text-base md:text-lg justify-center"
+            >
+              Get Free Guidance
+            </a>
+          </div>
+          <Link
+            href="/contact"
+            className="text-base font-semibold text-white/95 hover:text-white underline underline-offset-4 decoration-white/50 hover:decoration-white transition-colors"
           >
-            Get Free Guidance
-          </a>
+            Talk to Advisor
+          </Link>
         </div>
       </div>
     </section>

@@ -43,8 +43,8 @@ export default function HomeWhyChooseUs() {
               Why BOSS Academy
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed max-w-md">
-              We’re built like a modern career platform: clear paths, hands-on work, and support when you need it, not
-              endless theory.
+              Clear paths, hands-on work, and support when you need it, not endless theory. We grow and refine our
+              programs as we learn what works for beginners.
             </p>
           </div>
 

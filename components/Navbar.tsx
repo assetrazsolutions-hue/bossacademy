@@ -39,17 +39,17 @@ export default function Navbar() {
             <Link href="/register" className={navLink}>
               Register
             </Link>
-            <Link href="/contact" className={navLink}>
-              Contact
+            <Link href="/contact" className={`${navLink} text-primary-600 font-semibold`}>
+              Talk to Advisor
             </Link>
-            <Link href="/register" className="btn-cta-nav ml-2">
-              Enroll now
+            <Link href="/programs" className="btn-cta-nav ml-1">
+              Start Learning Now
             </Link>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
-            <Link href="/register" className="btn-cta-nav text-xs px-3 py-1.5">
-              Enroll
+            <Link href="/programs" className="btn-cta-nav text-xs px-3 py-1.5">
+              Start Learning
             </Link>
             <button
               type="button"
@@ -78,7 +78,6 @@ export default function Navbar() {
               ['/programs', 'Programs'],
               ['/partnerships', 'Partnerships'],
               ['/register', 'Register'],
-              ['/contact', 'Contact'],
             ].map(([href, label]) => (
               <Link
                 key={href}
@@ -90,11 +89,18 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/register"
+              href="/contact"
+              className="block rounded-card px-3 py-2.5 text-base font-semibold text-primary-600 hover:bg-surface transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Talk to Advisor
+            </Link>
+            <Link
+              href="/programs"
               className="btn-cta block w-full text-center py-3 mt-2"
               onClick={() => setIsOpen(false)}
             >
-              Enroll now
+              Start Learning Now
             </Link>
           </div>
         </div>

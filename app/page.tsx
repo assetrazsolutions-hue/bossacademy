@@ -5,7 +5,9 @@ import HomeCoreCourses from '@/components/HomeCoreCourses'
 import HomeNotSureSection from '@/components/HomeNotSureSection'
 import HomeWhyChooseUs from '@/components/HomeWhyChooseUs'
 import HomeHowItWorks from '@/components/HomeHowItWorks'
-import HomeTestimonials from '@/components/HomeTestimonials'
+import HomeOurApproach from '@/components/HomeOurApproach'
+import HomeWhatYouWillGain from '@/components/HomeWhatYouWillGain'
+import HomeTransparencyBlock from '@/components/HomeTransparencyBlock'
 import HomeFinalCTA from '@/components/HomeFinalCTA'
 
 export default function Home() {
@@ -18,7 +20,9 @@ export default function Home() {
       <HomeNotSureSection />
       <HomeWhyChooseUs />
       <HomeHowItWorks />
-      <HomeTestimonials />
+      <HomeOurApproach />
+      <HomeWhatYouWillGain />
+      <HomeTransparencyBlock />
       <HomeFinalCTA />
     </div>
   )

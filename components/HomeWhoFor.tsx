@@ -17,8 +17,8 @@ const audiences = [
     icon: RefreshCw,
   },
   {
-    title: 'Beginners',
-    description: 'No background needed. Lessons start from the basics at a steady, supportive pace.',
+    title: 'Beginners with no experience',
+    description: 'No background needed. We start from the basics at a steady pace so you are not left behind.',
     icon: Sparkles,
   },
 ]
@@ -30,7 +30,8 @@ export default function HomeWhoFor() {
         <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">Who is this for?</h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            For people who want skills that show up in real work, not another certificate sitting in a drawer.
+            Students, freshers, job seekers, career switchers, and complete beginners who want clear, practical learning
+            without inflated promises.
           </p>
         </div>
 
